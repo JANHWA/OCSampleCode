@@ -1,0 +1,6 @@
+platform :ios,'9.0'
+use_frameworks!
+target “Cell_Height” do
+pod ‘Masonry’
+pod 'UITableView+FDTemplateLayoutCell'
+end

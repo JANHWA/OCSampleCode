@@ -1,0 +1,650 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D0E23B5E1EBCA78900EB257C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E23B5D1EBCA78900EB257C /* main.m */; };
+		D0E23B611EBCA78900EB257C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E23B601EBCA78900EB257C /* AppDelegate.m */; };
+		D0E23B641EBCA78900EB257C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E23B631EBCA78900EB257C /* ViewController.m */; };
+		D0E23B671EBCA78900EB257C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0E23B651EBCA78900EB257C /* Main.storyboard */; };
+		D0E23B691EBCA78900EB257C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0E23B681EBCA78900EB257C /* Assets.xcassets */; };
+		D0E23B6C1EBCA78900EB257C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0E23B6A1EBCA78900EB257C /* LaunchScreen.storyboard */; };
+		D0E23B771EBCA78900EB257C /* Cell_HeightTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E23B761EBCA78900EB257C /* Cell_HeightTests.m */; };
+		D0E23B821EBCA78900EB257C /* Cell_HeightUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E23B811EBCA78900EB257C /* Cell_HeightUITests.m */; };
+		D0E23B931EBCA7E400EB257C /* JHTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E23B921EBCA7E400EB257C /* JHTableViewCell.m */; };
+		D0E23B961EBCADFD00EB257C /* JHCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E23B951EBCADFD00EB257C /* JHCollectionViewCell.m */; };
+		DB0D4CE65B40C00C9D30969E /* Pods_Cell_Height.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7FAEADAEEC37AA73E4CE776 /* Pods_Cell_Height.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D0E23B731EBCA78900EB257C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0E23B511EBCA78900EB257C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0E23B581EBCA78900EB257C;
+			remoteInfo = Cell_Height;
+		};
+		D0E23B7E1EBCA78900EB257C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0E23B511EBCA78900EB257C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0E23B581EBCA78900EB257C;
+			remoteInfo = Cell_Height;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2DE9276620097073529E592A /* Pods-Cell_Height.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cell_Height.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cell_Height/Pods-Cell_Height.release.xcconfig"; sourceTree = "<group>"; };
+		3B407FC2E36BC80E6367608A /* Pods-Cell_Height.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cell_Height.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cell_Height/Pods-Cell_Height.debug.xcconfig"; sourceTree = "<group>"; };
+		D0E23B591EBCA78900EB257C /* Cell_Height.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cell_Height.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0E23B5D1EBCA78900EB257C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D0E23B5F1EBCA78900EB257C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D0E23B601EBCA78900EB257C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D0E23B621EBCA78900EB257C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D0E23B631EBCA78900EB257C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D0E23B661EBCA78900EB257C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D0E23B681EBCA78900EB257C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D0E23B6B1EBCA78900EB257C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D0E23B6D1EBCA78900EB257C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0E23B721EBCA78900EB257C /* Cell_HeightTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Cell_HeightTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0E23B761EBCA78900EB257C /* Cell_HeightTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Cell_HeightTests.m; sourceTree = "<group>"; };
+		D0E23B781EBCA78900EB257C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0E23B7D1EBCA78900EB257C /* Cell_HeightUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Cell_HeightUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0E23B811EBCA78900EB257C /* Cell_HeightUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Cell_HeightUITests.m; sourceTree = "<group>"; };
+		D0E23B831EBCA78900EB257C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0E23B911EBCA7E400EB257C /* JHTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHTableViewCell.h; sourceTree = "<group>"; };
+		D0E23B921EBCA7E400EB257C /* JHTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHTableViewCell.m; sourceTree = "<group>"; };
+		D0E23B941EBCADFD00EB257C /* JHCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHCollectionViewCell.h; sourceTree = "<group>"; };
+		D0E23B951EBCADFD00EB257C /* JHCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHCollectionViewCell.m; sourceTree = "<group>"; };
+		F7FAEADAEEC37AA73E4CE776 /* Pods_Cell_Height.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cell_Height.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D0E23B561EBCA78900EB257C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB0D4CE65B40C00C9D30969E /* Pods_Cell_Height.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0E23B6F1EBCA78900EB257C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0E23B7A1EBCA78900EB257C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0CC9B7546CC10CBA6AA2A516 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3B407FC2E36BC80E6367608A /* Pods-Cell_Height.debug.xcconfig */,
+				2DE9276620097073529E592A /* Pods-Cell_Height.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		82222A590CF42D6BEADBC265 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F7FAEADAEEC37AA73E4CE776 /* Pods_Cell_Height.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D0E23B501EBCA78900EB257C = {
+			isa = PBXGroup;
+			children = (
+				D0E23B5B1EBCA78900EB257C /* Cell_Height */,
+				D0E23B751EBCA78900EB257C /* Cell_HeightTests */,
+				D0E23B801EBCA78900EB257C /* Cell_HeightUITests */,
+				D0E23B5A1EBCA78900EB257C /* Products */,
+				0CC9B7546CC10CBA6AA2A516 /* Pods */,
+				82222A590CF42D6BEADBC265 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D0E23B5A1EBCA78900EB257C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D0E23B591EBCA78900EB257C /* Cell_Height.app */,
+				D0E23B721EBCA78900EB257C /* Cell_HeightTests.xctest */,
+				D0E23B7D1EBCA78900EB257C /* Cell_HeightUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D0E23B5B1EBCA78900EB257C /* Cell_Height */ = {
+			isa = PBXGroup;
+			children = (
+				D0E23B901EBCA7AC00EB257C /* View */,
+				D0E23B8F1EBCA79A00EB257C /* Other */,
+				D0E23B5C1EBCA78900EB257C /* Supporting Files */,
+			);
+			path = Cell_Height;
+			sourceTree = "<group>";
+		};
+		D0E23B5C1EBCA78900EB257C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D0E23B5D1EBCA78900EB257C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D0E23B751EBCA78900EB257C /* Cell_HeightTests */ = {
+			isa = PBXGroup;
+			children = (
+				D0E23B761EBCA78900EB257C /* Cell_HeightTests.m */,
+				D0E23B781EBCA78900EB257C /* Info.plist */,
+			);
+			path = Cell_HeightTests;
+			sourceTree = "<group>";
+		};
+		D0E23B801EBCA78900EB257C /* Cell_HeightUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D0E23B811EBCA78900EB257C /* Cell_HeightUITests.m */,
+				D0E23B831EBCA78900EB257C /* Info.plist */,
+			);
+			path = Cell_HeightUITests;
+			sourceTree = "<group>";
+		};
+		D0E23B8F1EBCA79A00EB257C /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				D0E23B5F1EBCA78900EB257C /* AppDelegate.h */,
+				D0E23B601EBCA78900EB257C /* AppDelegate.m */,
+				D0E23B621EBCA78900EB257C /* ViewController.h */,
+				D0E23B631EBCA78900EB257C /* ViewController.m */,
+				D0E23B651EBCA78900EB257C /* Main.storyboard */,
+				D0E23B681EBCA78900EB257C /* Assets.xcassets */,
+				D0E23B6A1EBCA78900EB257C /* LaunchScreen.storyboard */,
+				D0E23B6D1EBCA78900EB257C /* Info.plist */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+		D0E23B901EBCA7AC00EB257C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D0E23B911EBCA7E400EB257C /* JHTableViewCell.h */,
+				D0E23B921EBCA7E400EB257C /* JHTableViewCell.m */,
+				D0E23B941EBCADFD00EB257C /* JHCollectionViewCell.h */,
+				D0E23B951EBCADFD00EB257C /* JHCollectionViewCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D0E23B581EBCA78900EB257C /* Cell_Height */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0E23B861EBCA78900EB257C /* Build configuration list for PBXNativeTarget "Cell_Height" */;
+			buildPhases = (
+				05C5E049C0221FCDBD5EBFF3 /* [CP] Check Pods Manifest.lock */,
+				D0E23B551EBCA78900EB257C /* Sources */,
+				D0E23B561EBCA78900EB257C /* Frameworks */,
+				D0E23B571EBCA78900EB257C /* Resources */,
+				F7D312009E9E42F03057A418 /* [CP] Embed Pods Frameworks */,
+				93A49FC980B8881524FCFA8D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Cell_Height;
+			productName = Cell_Height;
+			productReference = D0E23B591EBCA78900EB257C /* Cell_Height.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D0E23B711EBCA78900EB257C /* Cell_HeightTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0E23B891EBCA78900EB257C /* Build configuration list for PBXNativeTarget "Cell_HeightTests" */;
+			buildPhases = (
+				D0E23B6E1EBCA78900EB257C /* Sources */,
+				D0E23B6F1EBCA78900EB257C /* Frameworks */,
+				D0E23B701EBCA78900EB257C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D0E23B741EBCA78900EB257C /* PBXTargetDependency */,
+			);
+			name = Cell_HeightTests;
+			productName = Cell_HeightTests;
+			productReference = D0E23B721EBCA78900EB257C /* Cell_HeightTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D0E23B7C1EBCA78900EB257C /* Cell_HeightUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0E23B8C1EBCA78900EB257C /* Build configuration list for PBXNativeTarget "Cell_HeightUITests" */;
+			buildPhases = (
+				D0E23B791EBCA78900EB257C /* Sources */,
+				D0E23B7A1EBCA78900EB257C /* Frameworks */,
+				D0E23B7B1EBCA78900EB257C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D0E23B7F1EBCA78900EB257C /* PBXTargetDependency */,
+			);
+			name = Cell_HeightUITests;
+			productName = Cell_HeightUITests;
+			productReference = D0E23B7D1EBCA78900EB257C /* Cell_HeightUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D0E23B511EBCA78900EB257C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = JH;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Justin;
+				TargetAttributes = {
+					D0E23B581EBCA78900EB257C = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 5UB324DE42;
+						ProvisioningStyle = Automatic;
+					};
+					D0E23B711EBCA78900EB257C = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 5UB324DE42;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D0E23B581EBCA78900EB257C;
+					};
+					D0E23B7C1EBCA78900EB257C = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 5UB324DE42;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D0E23B581EBCA78900EB257C;
+					};
+				};
+			};
+			buildConfigurationList = D0E23B541EBCA78900EB257C /* Build configuration list for PBXProject "Cell_Height" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D0E23B501EBCA78900EB257C;
+			productRefGroup = D0E23B5A1EBCA78900EB257C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D0E23B581EBCA78900EB257C /* Cell_Height */,
+				D0E23B711EBCA78900EB257C /* Cell_HeightTests */,
+				D0E23B7C1EBCA78900EB257C /* Cell_HeightUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D0E23B571EBCA78900EB257C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0E23B6C1EBCA78900EB257C /* LaunchScreen.storyboard in Resources */,
+				D0E23B691EBCA78900EB257C /* Assets.xcassets in Resources */,
+				D0E23B671EBCA78900EB257C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0E23B701EBCA78900EB257C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0E23B7B1EBCA78900EB257C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		05C5E049C0221FCDBD5EBFF3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		93A49FC980B8881524FCFA8D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cell_Height/Pods-Cell_Height-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7D312009E9E42F03057A418 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cell_Height/Pods-Cell_Height-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D0E23B551EBCA78900EB257C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0E23B961EBCADFD00EB257C /* JHCollectionViewCell.m in Sources */,
+				D0E23B641EBCA78900EB257C /* ViewController.m in Sources */,
+				D0E23B931EBCA7E400EB257C /* JHTableViewCell.m in Sources */,
+				D0E23B611EBCA78900EB257C /* AppDelegate.m in Sources */,
+				D0E23B5E1EBCA78900EB257C /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0E23B6E1EBCA78900EB257C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0E23B771EBCA78900EB257C /* Cell_HeightTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0E23B791EBCA78900EB257C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0E23B821EBCA78900EB257C /* Cell_HeightUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D0E23B741EBCA78900EB257C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D0E23B581EBCA78900EB257C /* Cell_Height */;
+			targetProxy = D0E23B731EBCA78900EB257C /* PBXContainerItemProxy */;
+		};
+		D0E23B7F1EBCA78900EB257C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D0E23B581EBCA78900EB257C /* Cell_Height */;
+			targetProxy = D0E23B7E1EBCA78900EB257C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D0E23B651EBCA78900EB257C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0E23B661EBCA78900EB257C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D0E23B6A1EBCA78900EB257C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0E23B6B1EBCA78900EB257C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D0E23B841EBCA78900EB257C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D0E23B851EBCA78900EB257C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D0E23B871EBCA78900EB257C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B407FC2E36BC80E6367608A /* Pods-Cell_Height.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5UB324DE42;
+				INFOPLIST_FILE = Cell_Height/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Justin.Cell-Height";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
+			};
+			name = Debug;
+		};
+		D0E23B881EBCA78900EB257C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2DE9276620097073529E592A /* Pods-Cell_Height.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5UB324DE42;
+				INFOPLIST_FILE = Cell_Height/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Justin.Cell-Height";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
+			};
+			name = Release;
+		};
+		D0E23B8A1EBCA78900EB257C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 5UB324DE42;
+				INFOPLIST_FILE = Cell_HeightTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Justin.Cell-HeightTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cell_Height.app/Cell_Height";
+			};
+			name = Debug;
+		};
+		D0E23B8B1EBCA78900EB257C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 5UB324DE42;
+				INFOPLIST_FILE = Cell_HeightTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Justin.Cell-HeightTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cell_Height.app/Cell_Height";
+			};
+			name = Release;
+		};
+		D0E23B8D1EBCA78900EB257C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 5UB324DE42;
+				INFOPLIST_FILE = Cell_HeightUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Justin.Cell-HeightUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Cell_Height;
+			};
+			name = Debug;
+		};
+		D0E23B8E1EBCA78900EB257C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 5UB324DE42;
+				INFOPLIST_FILE = Cell_HeightUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Justin.Cell-HeightUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Cell_Height;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D0E23B541EBCA78900EB257C /* Build configuration list for PBXProject "Cell_Height" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0E23B841EBCA78900EB257C /* Debug */,
+				D0E23B851EBCA78900EB257C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0E23B861EBCA78900EB257C /* Build configuration list for PBXNativeTarget "Cell_Height" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0E23B871EBCA78900EB257C /* Debug */,
+				D0E23B881EBCA78900EB257C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0E23B891EBCA78900EB257C /* Build configuration list for PBXNativeTarget "Cell_HeightTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0E23B8A1EBCA78900EB257C /* Debug */,
+				D0E23B8B1EBCA78900EB257C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0E23B8C1EBCA78900EB257C /* Build configuration list for PBXNativeTarget "Cell_HeightUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0E23B8D1EBCA78900EB257C /* Debug */,
+				D0E23B8E1EBCA78900EB257C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D0E23B511EBCA78900EB257C /* Project object */;
+}
