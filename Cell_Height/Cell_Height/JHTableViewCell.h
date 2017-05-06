@@ -10,8 +10,10 @@
 
 @interface JHTableViewCell : UITableViewCell
 
-@property (strong, nonatomic) UILabel *titleLabel;
-@property (strong, nonatomic) UITextView *textView;
 
++ (JHTableViewCell *)showContentWithArray:(NSArray *)array
+                                tableView:(UITableView *)tableView
+                                indexPath:(NSIndexPath *)indexPath
+                               Identifier:(NSString *)identifier;
 
 @end

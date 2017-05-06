@@ -17,6 +17,8 @@
 		D0E23B821EBCA78900EB257C /* Cell_HeightUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E23B811EBCA78900EB257C /* Cell_HeightUITests.m */; };
 		D0E23B931EBCA7E400EB257C /* JHTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E23B921EBCA7E400EB257C /* JHTableViewCell.m */; };
 		D0E23B961EBCADFD00EB257C /* JHCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E23B951EBCADFD00EB257C /* JHCollectionViewCell.m */; };
+		D0E23B991EBDD49300EB257C /* JHTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E23B981EBDD49300EB257C /* JHTableView.m */; };
+		D0E23B9C1EBE0A4800EB257C /* JHTestTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E23B9B1EBE0A4800EB257C /* JHTestTableView.m */; };
 		DB0D4CE65B40C00C9D30969E /* Pods_Cell_Height.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7FAEADAEEC37AA73E4CE776 /* Pods_Cell_Height.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +62,10 @@
 		D0E23B921EBCA7E400EB257C /* JHTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHTableViewCell.m; sourceTree = "<group>"; };
 		D0E23B941EBCADFD00EB257C /* JHCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHCollectionViewCell.h; sourceTree = "<group>"; };
 		D0E23B951EBCADFD00EB257C /* JHCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHCollectionViewCell.m; sourceTree = "<group>"; };
+		D0E23B971EBDD49300EB257C /* JHTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHTableView.h; sourceTree = "<group>"; };
+		D0E23B981EBDD49300EB257C /* JHTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHTableView.m; sourceTree = "<group>"; };
+		D0E23B9A1EBE0A4800EB257C /* JHTestTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHTestTableView.h; sourceTree = "<group>"; };
+		D0E23B9B1EBE0A4800EB257C /* JHTestTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHTestTableView.m; sourceTree = "<group>"; };
 		F7FAEADAEEC37AA73E4CE776 /* Pods_Cell_Height.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cell_Height.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -186,6 +192,10 @@
 				D0E23B921EBCA7E400EB257C /* JHTableViewCell.m */,
 				D0E23B941EBCADFD00EB257C /* JHCollectionViewCell.h */,
 				D0E23B951EBCADFD00EB257C /* JHCollectionViewCell.m */,
+				D0E23B971EBDD49300EB257C /* JHTableView.h */,
+				D0E23B981EBDD49300EB257C /* JHTableView.m */,
+				D0E23B9A1EBE0A4800EB257C /* JHTestTableView.h */,
+				D0E23B9B1EBE0A4800EB257C /* JHTestTableView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -379,6 +389,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0E23B961EBCADFD00EB257C /* JHCollectionViewCell.m in Sources */,
+				D0E23B991EBDD49300EB257C /* JHTableView.m in Sources */,
+				D0E23B9C1EBE0A4800EB257C /* JHTestTableView.m in Sources */,
 				D0E23B641EBCA78900EB257C /* ViewController.m in Sources */,
 				D0E23B931EBCA7E400EB257C /* JHTableViewCell.m in Sources */,
 				D0E23B611EBCA78900EB257C /* AppDelegate.m in Sources */,
