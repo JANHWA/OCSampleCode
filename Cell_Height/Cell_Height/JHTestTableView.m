@@ -11,10 +11,23 @@
 
 @implementation JHTestTableView
 
+- (void)setPhotoArray:(NSMutableArray *)photoArray {
+    
+    _photoArray = [NSMutableArray arrayWithArray:photoArray];
+    _photoArray = photoArray;
+}
+
 - (void)layoutView:(UIView *)view {
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(view).insets(UIEdgeInsetsMake(0, 0, 200, 0));
+        make.edges.equalTo(view).insets(UIEdgeInsetsMake(0, 0, 100, 0));
     }];
+}
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    NSInteger rowCount = _photoArray.count > 4?2:(_photoArray.count == 0?0:1);
+    return indexPath.section == 3 && indexPath.row == 1?(rowCount > 0?(rowCount * CellWidth + 6*(Margin)):0):30;
 }
 
 @end

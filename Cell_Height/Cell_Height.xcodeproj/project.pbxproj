@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D01818141EBF520B00F486BC /* JHPhotoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D01818131EBF520B00F486BC /* JHPhotoTableViewCell.m */; };
+		D01818231EBF621200F486BC /* image1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D018181A1EBF621200F486BC /* image1.jpg */; };
+		D01818241EBF621200F486BC /* image2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D018181B1EBF621200F486BC /* image2.jpg */; };
+		D01818251EBF621200F486BC /* image3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D018181C1EBF621200F486BC /* image3.jpg */; };
+		D01818261EBF621200F486BC /* image4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D018181D1EBF621200F486BC /* image4.jpg */; };
+		D01818271EBF621200F486BC /* image5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D018181E1EBF621200F486BC /* image5.jpg */; };
+		D01818281EBF621200F486BC /* image6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D018181F1EBF621200F486BC /* image6.jpg */; };
+		D01818291EBF621200F486BC /* image7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D01818201EBF621200F486BC /* image7.jpg */; };
+		D018182A1EBF621200F486BC /* image8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D01818211EBF621200F486BC /* image8.jpg */; };
+		D018182B1EBF621200F486BC /* image9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D01818221EBF621200F486BC /* image9.jpg */; };
+		D018182D1EBF6C6A00F486BC /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = D018182C1EBF6C6A00F486BC /* delete.png */; };
 		D0E23B5E1EBCA78900EB257C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E23B5D1EBCA78900EB257C /* main.m */; };
 		D0E23B611EBCA78900EB257C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E23B601EBCA78900EB257C /* AppDelegate.m */; };
 		D0E23B641EBCA78900EB257C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E23B631EBCA78900EB257C /* ViewController.m */; };
@@ -42,6 +53,20 @@
 /* Begin PBXFileReference section */
 		2DE9276620097073529E592A /* Pods-Cell_Height.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cell_Height.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cell_Height/Pods-Cell_Height.release.xcconfig"; sourceTree = "<group>"; };
 		3B407FC2E36BC80E6367608A /* Pods-Cell_Height.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cell_Height.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cell_Height/Pods-Cell_Height.debug.xcconfig"; sourceTree = "<group>"; };
+		D01818121EBF520B00F486BC /* JHPhotoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHPhotoTableViewCell.h; sourceTree = "<group>"; };
+		D01818131EBF520B00F486BC /* JHPhotoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHPhotoTableViewCell.m; sourceTree = "<group>"; };
+		D01818161EBF53C400F486BC /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		D01818171EBF53D000F486BC /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		D018181A1EBF621200F486BC /* image1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image1.jpg; sourceTree = "<group>"; };
+		D018181B1EBF621200F486BC /* image2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image2.jpg; sourceTree = "<group>"; };
+		D018181C1EBF621200F486BC /* image3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image3.jpg; sourceTree = "<group>"; };
+		D018181D1EBF621200F486BC /* image4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image4.jpg; sourceTree = "<group>"; };
+		D018181E1EBF621200F486BC /* image5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image5.jpg; sourceTree = "<group>"; };
+		D018181F1EBF621200F486BC /* image6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image6.jpg; sourceTree = "<group>"; };
+		D01818201EBF621200F486BC /* image7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image7.jpg; sourceTree = "<group>"; };
+		D01818211EBF621200F486BC /* image8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image8.jpg; sourceTree = "<group>"; };
+		D01818221EBF621200F486BC /* image9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image9.jpg; sourceTree = "<group>"; };
+		D018182C1EBF6C6A00F486BC /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
 		D0E23B591EBCA78900EB257C /* Cell_Height.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cell_Height.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0E23B5D1EBCA78900EB257C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D0E23B5F1EBCA78900EB257C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -112,6 +137,40 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D01818151EBF53AE00F486BC /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				D01818161EBF53C400F486BC /* PrefixHeader.pch */,
+				D01818171EBF53D000F486BC /* Header.h */,
+			);
+			name = tools;
+			sourceTree = "<group>";
+		};
+		D01818181EBF61CC00F486BC /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				D01818191EBF621200F486BC /* photo */,
+			);
+			name = resource;
+			sourceTree = "<group>";
+		};
+		D01818191EBF621200F486BC /* photo */ = {
+			isa = PBXGroup;
+			children = (
+				D018182C1EBF6C6A00F486BC /* delete.png */,
+				D018181A1EBF621200F486BC /* image1.jpg */,
+				D018181B1EBF621200F486BC /* image2.jpg */,
+				D018181C1EBF621200F486BC /* image3.jpg */,
+				D018181D1EBF621200F486BC /* image4.jpg */,
+				D018181E1EBF621200F486BC /* image5.jpg */,
+				D018181F1EBF621200F486BC /* image6.jpg */,
+				D01818201EBF621200F486BC /* image7.jpg */,
+				D01818211EBF621200F486BC /* image8.jpg */,
+				D01818221EBF621200F486BC /* image9.jpg */,
+			);
+			path = photo;
+			sourceTree = "<group>";
+		};
 		D0E23B501EBCA78900EB257C = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +196,8 @@
 		D0E23B5B1EBCA78900EB257C /* Cell_Height */ = {
 			isa = PBXGroup;
 			children = (
+				D01818181EBF61CC00F486BC /* resource */,
+				D01818151EBF53AE00F486BC /* tools */,
 				D0E23B901EBCA7AC00EB257C /* View */,
 				D0E23B8F1EBCA79A00EB257C /* Other */,
 				D0E23B5C1EBCA78900EB257C /* Supporting Files */,
@@ -196,6 +257,8 @@
 				D0E23B981EBDD49300EB257C /* JHTableView.m */,
 				D0E23B9A1EBE0A4800EB257C /* JHTestTableView.h */,
 				D0E23B9B1EBE0A4800EB257C /* JHTestTableView.m */,
+				D01818121EBF520B00F486BC /* JHPhotoTableViewCell.h */,
+				D01818131EBF520B00F486BC /* JHPhotoTableViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -313,7 +376,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D01818231EBF621200F486BC /* image1.jpg in Resources */,
+				D01818291EBF621200F486BC /* image7.jpg in Resources */,
+				D01818271EBF621200F486BC /* image5.jpg in Resources */,
+				D018182A1EBF621200F486BC /* image8.jpg in Resources */,
+				D01818241EBF621200F486BC /* image2.jpg in Resources */,
 				D0E23B6C1EBCA78900EB257C /* LaunchScreen.storyboard in Resources */,
+				D018182D1EBF6C6A00F486BC /* delete.png in Resources */,
+				D01818251EBF621200F486BC /* image3.jpg in Resources */,
+				D01818261EBF621200F486BC /* image4.jpg in Resources */,
+				D01818281EBF621200F486BC /* image6.jpg in Resources */,
+				D018182B1EBF621200F486BC /* image9.jpg in Resources */,
 				D0E23B691EBCA78900EB257C /* Assets.xcassets in Resources */,
 				D0E23B671EBCA78900EB257C /* Main.storyboard in Resources */,
 			);
@@ -388,6 +461,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D01818141EBF520B00F486BC /* JHPhotoTableViewCell.m in Sources */,
 				D0E23B961EBCADFD00EB257C /* JHCollectionViewCell.m in Sources */,
 				D0E23B991EBDD49300EB257C /* JHTableView.m in Sources */,
 				D0E23B9C1EBE0A4800EB257C /* JHTestTableView.m in Sources */,
@@ -545,6 +619,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5UB324DE42;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Cell_Height/PrefixHeader.pch";
 				INFOPLIST_FILE = Cell_Height/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Justin.Cell-Height";
@@ -559,6 +634,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5UB324DE42;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Cell_Height/PrefixHeader.pch";
 				INFOPLIST_FILE = Cell_Height/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Justin.Cell-Height";
