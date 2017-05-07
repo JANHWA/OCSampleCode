@@ -17,7 +17,7 @@
 /**
  cell的回调，返回cell的对象
  */
-@property (copy, nonatomic) CellCalledBlock cellCalled;
+@property (copy, nonatomic) CellForRowBlock cellForRow;
 
 /**
  点击cell的回调
@@ -50,13 +50,12 @@
 
 - (instancetype)initInView:(UIView *)view
             tableViewStyle:(UITableViewStyle)style
-           CellCalledBlock:(CellCalledBlock)cellCalled
+                cellForRow:(CellForRowBlock)cellForRow
 {
     self = [super init];
     if (self) {
         _style = style;
-        _cellCalled = cellCalled;
-        
+        _cellForRow = cellForRow;
         [view addSubview:self.tableView];
         [self layoutView:view];
     }
@@ -65,7 +64,25 @@
 
 #pragma mark - private Method
 
+- (NSInteger)returnNumberOfSection {
+    if ([self.dataArray.firstObject isKindOfClass:[NSArray class]] && _style == UITableViewStyleGrouped) {
+        return self.dataArray.count;
+    } else {
+        return 1;
+    }
+}
+
+- (NSInteger)returnNumberOfRowInSetion:(NSInteger)section {
+    if ([self.dataArray.firstObject isKindOfClass:[NSArray class]] && _style == UITableViewStyleGrouped) {
+        NSArray *array = self.dataArray[section];
+        return array.count;
+    } else {
+        return self.dataArray.count;
+    }
+}
+
 #pragma mark - public  Method
+
 - (void)didSelectRowAtIndexPath:(didSelectBlock)didSelectIndexPath {
     _didSelectIndexPath = didSelectIndexPath;
 }
@@ -80,7 +97,6 @@
      __weak typeof(self) weakSelf = self;
     [self.dataArray removeAllObjects];
     [self.dataArray addObjectsFromArray:array];
-    
     dispatch_async(dispatch_get_main_queue(), ^{
         [weakSelf.tableView reloadData];
     });
@@ -89,15 +105,15 @@
 #pragma mark - protocol Method
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return [self returnNumberOfSection];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.dataArray.count;
+    return [self returnNumberOfRowInSetion:section];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = _cellCalled(tableView,indexPath);
+    UITableViewCell *cell = _cellForRow(tableView,indexPath);
     return cell;
 }
 

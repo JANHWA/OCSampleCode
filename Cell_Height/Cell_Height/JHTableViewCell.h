@@ -14,6 +14,6 @@
 + (JHTableViewCell *)showContentWithArray:(NSArray *)array
                                 tableView:(UITableView *)tableView
                                 indexPath:(NSIndexPath *)indexPath
-                               Identifier:(NSString *)identifier;
+                               identifier:(NSString *)identifier;
 
 @end

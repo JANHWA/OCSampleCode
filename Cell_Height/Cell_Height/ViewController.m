@@ -37,24 +37,26 @@
     __weak typeof(self) weakSelf = self;
     self.tableView = [[JHTestTableView alloc] initInView:self.view
                                           tableViewStyle:UITableViewStyleGrouped
-                                         CellCalledBlock:^UITableViewCell *(UITableView *tableView, NSIndexPath *indexPath) {
-                                   
-                                            
+                                              cellForRow:^UITableViewCell *(UITableView *tableView, NSIndexPath *indexPath) {
         return [JHTableViewCell showContentWithArray:weakSelf.dataArray
                                            tableView:tableView
                                            indexPath:indexPath
-                                          Identifier:CELLID
+                                          identifier:CELLID
                 ];
     }];
-    
     [self.tableView didSelectRowAtIndexPath:^(NSIndexPath *indexPath) {
-        NSLog(@"点击section：%ld --row:%ld --内容：%@",indexPath.section,indexPath.row,self.dataArray[indexPath.row]);
+        NSLog(@"点击section：%ld --row:%ld --内容：%@",indexPath.section,indexPath.row,self.dataArray[indexPath.section][indexPath.row]);
     }];
 }
 
-
 - (IBAction)btnClick:(UIButton *)sender {
-    NSArray *titleArray = @[@"0在细雨中呼喊",@"1北京法源寺",@"2曾国藩家书",@"3自在独行"];
+//    NSArray *titleArray = @[@/"0在细雨中呼喊",@"1北京法源寺",@"2曾国藩家书",@"3自在独行"];
+    
+    NSArray *titleArray = @[@[@"0在细雨中呼喊",@"3自在独行"],
+                            @[@"0在细雨中呼喊"],
+                            @[@"1北京法源寺",@"2曾国藩家书",@"3自在独行"],
+                            @[@"0在细雨中呼喊",@"3自在独行"],
+                            @[@"0在细雨中呼喊",@"1北京法源寺",@"2曾国藩家书",@"3自在独行"]];
     [self.dataArray removeAllObjects];
     [self.dataArray addObjectsFromArray:titleArray];
     [self.tableView reloadWithData:self.dataArray];

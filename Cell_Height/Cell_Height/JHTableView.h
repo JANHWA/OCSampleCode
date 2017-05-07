@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-typedef UITableViewCell *(^CellCalledBlock)(UITableView *tableView,NSIndexPath *indexPath);
+typedef UITableViewCell *(^CellForRowBlock)(UITableView *tableView,NSIndexPath *indexPath);
 
 typedef void(^didSelectBlock)(NSIndexPath *indexPath);
 
@@ -35,13 +35,12 @@ typedef void(^didSelectBlock)(NSIndexPath *indexPath);
 
  @param view 显示所在的视图
  @param style 分组、不分组（默认不分组）
- @param cellCalled cell的回调
+ @param cellForRow cell的回调
  @return 返回对象
  */
 - (instancetype)initInView:(UIView *)view
             tableViewStyle:(UITableViewStyle)style
-           CellCalledBlock:(CellCalledBlock)cellCalled;
-
+                cellForRow:(CellForRowBlock)cellForRow;
 
 /**
  点击cell的回调方法
@@ -51,9 +50,9 @@ typedef void(^didSelectBlock)(NSIndexPath *indexPath);
 - (void)didSelectRowAtIndexPath:(didSelectBlock)didSelectIndexPath;
 
 /**
- 布局方法
+ 布局方法（默认和父视frame相等）
 
- @param view 视图所在的父视图
+ @param view 列表所在的父视图
  */
 - (void)layoutView:(UIView *)view;
 

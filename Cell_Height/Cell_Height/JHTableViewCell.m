@@ -55,7 +55,7 @@
 + (JHTableViewCell *)showContentWithArray:(NSArray *)array
                                 tableView:(UITableView *)tableView
                                 indexPath:(NSIndexPath *)indexPath
-                               Identifier:(NSString *)identifier
+                               identifier:(NSString *)identifier
 {
     
     JHTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
@@ -63,7 +63,7 @@
         cell = [[JHTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
                                       reuseIdentifier:identifier];
     }
-    [cell showContentWithTitle:array[indexPath.row]];
+    [cell showContentWithTitle:array[indexPath.section][indexPath.row]];
     return cell;
 }
 
