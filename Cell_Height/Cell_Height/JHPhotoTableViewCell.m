@@ -57,13 +57,14 @@
     
     self.backgroundColor = [UIColor yellowColor];
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-    flowLayout.minimumLineSpacing = Margin;
-    flowLayout.minimumInteritemSpacing = Margin;
+//    flowLayout.minimumLineSpacing = Margin;
+//    flowLayout.minimumInteritemSpacing = Margin;
     
     self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flowLayout];
     [self.contentView addSubview:self.collectionView];
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
+    self.collectionView.userInteractionEnabled = YES;
     self.collectionView.backgroundColor = [UIColor whiteColor];
     [self.collectionView registerClass:[JHCollectionViewCell class] forCellWithReuseIdentifier:COLLECTIONCELLID];
     
@@ -82,7 +83,7 @@
     
     cell.btnBlock = ^(UIButton *sender) {
         if (_deleteBlock) {
-            NSUInteger index =  _deleteBlock(sender,indexPath.row);
+            NSUInteger index = _deleteBlock(sender,indexPath.row);
             [self.dataArray removeObjectAtIndex:index];
             [self.collectionView reloadData];
         }

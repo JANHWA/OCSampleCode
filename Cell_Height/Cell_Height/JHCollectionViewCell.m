@@ -25,6 +25,7 @@
     
     self.imageV = [[UIImageView alloc] init];
     _imageV.contentMode = UIViewContentModeScaleToFill;
+    self.imageV.userInteractionEnabled = YES;
     [self.contentView addSubview:self.imageV];
     
     self.deleBtn = [UIButton buttonWithType:UIButtonTypeCustom];

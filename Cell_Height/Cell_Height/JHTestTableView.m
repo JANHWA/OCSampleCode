@@ -23,11 +23,9 @@
     }];
 }
 
-
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
     NSInteger rowCount = _photoArray.count > 4?2:(_photoArray.count == 0?0:1);
-    return indexPath.section == 3 && indexPath.row == 1?(rowCount > 0?(rowCount * CellWidth + 6*(Margin)):0):30;
+    return indexPath.section == 3 && indexPath.row == 1?(rowCount > 0?(rowCount * CellWidth + 3*(Margin)):0):30;
 }
 
 @end

@@ -1,0 +1,621 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1AEE3306EDFDF899D70D833C /* libPods-UITableView+Chemistry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 26A44E7C3835A05A62D1B211 /* libPods-UITableView+Chemistry.a */; };
+		D07EAE131EC30EB700323BCC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D07EAE121EC30EB700323BCC /* main.m */; };
+		D07EAE161EC30EB700323BCC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D07EAE151EC30EB700323BCC /* AppDelegate.m */; };
+		D07EAE191EC30EB700323BCC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D07EAE181EC30EB700323BCC /* ViewController.m */; };
+		D07EAE1C1EC30EB700323BCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D07EAE1A1EC30EB700323BCC /* Main.storyboard */; };
+		D07EAE1E1EC30EB700323BCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D07EAE1D1EC30EB700323BCC /* Assets.xcassets */; };
+		D07EAE211EC30EB700323BCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D07EAE1F1EC30EB700323BCC /* LaunchScreen.storyboard */; };
+		D07EAE2C1EC30EB700323BCC /* UITableView_ChemistryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D07EAE2B1EC30EB700323BCC /* UITableView_ChemistryTests.m */; };
+		D07EAE371EC30EB700323BCC /* UITableView_ChemistryUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D07EAE361EC30EB700323BCC /* UITableView_ChemistryUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D07EAE281EC30EB700323BCC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D07EAE061EC30EB700323BCC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D07EAE0D1EC30EB700323BCC;
+			remoteInfo = "UITableView+Chemistry";
+		};
+		D07EAE331EC30EB700323BCC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D07EAE061EC30EB700323BCC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D07EAE0D1EC30EB700323BCC;
+			remoteInfo = "UITableView+Chemistry";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		26A44E7C3835A05A62D1B211 /* libPods-UITableView+Chemistry.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UITableView+Chemistry.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F3933609E5ECDA9988B3BD1 /* Pods-UITableView+Chemistry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UITableView+Chemistry.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UITableView+Chemistry/Pods-UITableView+Chemistry.debug.xcconfig"; sourceTree = "<group>"; };
+		AF3501A107CE17DC6E60D99D /* Pods-UITableView+Chemistry.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UITableView+Chemistry.release.xcconfig"; path = "Pods/Target Support Files/Pods-UITableView+Chemistry/Pods-UITableView+Chemistry.release.xcconfig"; sourceTree = "<group>"; };
+		D07EAE0E1EC30EB700323BCC /* UITableView+Chemistry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UITableView+Chemistry.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D07EAE121EC30EB700323BCC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D07EAE141EC30EB700323BCC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D07EAE151EC30EB700323BCC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D07EAE171EC30EB700323BCC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D07EAE181EC30EB700323BCC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D07EAE1B1EC30EB700323BCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D07EAE1D1EC30EB700323BCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D07EAE201EC30EB700323BCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D07EAE221EC30EB700323BCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D07EAE271EC30EB700323BCC /* UITableView+ChemistryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UITableView+ChemistryTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D07EAE2B1EC30EB700323BCC /* UITableView_ChemistryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITableView_ChemistryTests.m; sourceTree = "<group>"; };
+		D07EAE2D1EC30EB700323BCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D07EAE321EC30EB700323BCC /* UITableView+ChemistryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UITableView+ChemistryUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D07EAE361EC30EB700323BCC /* UITableView_ChemistryUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITableView_ChemistryUITests.m; sourceTree = "<group>"; };
+		D07EAE381EC30EB700323BCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D07EAE0B1EC30EB700323BCC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AEE3306EDFDF899D70D833C /* libPods-UITableView+Chemistry.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D07EAE241EC30EB700323BCC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D07EAE2F1EC30EB700323BCC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5B0422FBFD59782A69BBAD01 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				26A44E7C3835A05A62D1B211 /* libPods-UITableView+Chemistry.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B07062C1A468200F08F355DF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8F3933609E5ECDA9988B3BD1 /* Pods-UITableView+Chemistry.debug.xcconfig */,
+				AF3501A107CE17DC6E60D99D /* Pods-UITableView+Chemistry.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D07EAE051EC30EB700323BCC = {
+			isa = PBXGroup;
+			children = (
+				D07EAE101EC30EB700323BCC /* UITableView+Chemistry */,
+				D07EAE2A1EC30EB700323BCC /* UITableView+ChemistryTests */,
+				D07EAE351EC30EB700323BCC /* UITableView+ChemistryUITests */,
+				D07EAE0F1EC30EB700323BCC /* Products */,
+				B07062C1A468200F08F355DF /* Pods */,
+				5B0422FBFD59782A69BBAD01 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D07EAE0F1EC30EB700323BCC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D07EAE0E1EC30EB700323BCC /* UITableView+Chemistry.app */,
+				D07EAE271EC30EB700323BCC /* UITableView+ChemistryTests.xctest */,
+				D07EAE321EC30EB700323BCC /* UITableView+ChemistryUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D07EAE101EC30EB700323BCC /* UITableView+Chemistry */ = {
+			isa = PBXGroup;
+			children = (
+				D07EAE141EC30EB700323BCC /* AppDelegate.h */,
+				D07EAE151EC30EB700323BCC /* AppDelegate.m */,
+				D07EAE171EC30EB700323BCC /* ViewController.h */,
+				D07EAE181EC30EB700323BCC /* ViewController.m */,
+				D07EAE1A1EC30EB700323BCC /* Main.storyboard */,
+				D07EAE1D1EC30EB700323BCC /* Assets.xcassets */,
+				D07EAE1F1EC30EB700323BCC /* LaunchScreen.storyboard */,
+				D07EAE221EC30EB700323BCC /* Info.plist */,
+				D07EAE111EC30EB700323BCC /* Supporting Files */,
+			);
+			path = "UITableView+Chemistry";
+			sourceTree = "<group>";
+		};
+		D07EAE111EC30EB700323BCC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D07EAE121EC30EB700323BCC /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D07EAE2A1EC30EB700323BCC /* UITableView+ChemistryTests */ = {
+			isa = PBXGroup;
+			children = (
+				D07EAE2B1EC30EB700323BCC /* UITableView_ChemistryTests.m */,
+				D07EAE2D1EC30EB700323BCC /* Info.plist */,
+			);
+			path = "UITableView+ChemistryTests";
+			sourceTree = "<group>";
+		};
+		D07EAE351EC30EB700323BCC /* UITableView+ChemistryUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D07EAE361EC30EB700323BCC /* UITableView_ChemistryUITests.m */,
+				D07EAE381EC30EB700323BCC /* Info.plist */,
+			);
+			path = "UITableView+ChemistryUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D07EAE0D1EC30EB700323BCC /* UITableView+Chemistry */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D07EAE3B1EC30EB700323BCC /* Build configuration list for PBXNativeTarget "UITableView+Chemistry" */;
+			buildPhases = (
+				6C77AAD3C2A90538A6518723 /* [CP] Check Pods Manifest.lock */,
+				D07EAE0A1EC30EB700323BCC /* Sources */,
+				D07EAE0B1EC30EB700323BCC /* Frameworks */,
+				D07EAE0C1EC30EB700323BCC /* Resources */,
+				2882E91CEDB3FBBA41DF139F /* [CP] Embed Pods Frameworks */,
+				F12A2297145CF5FC579C85E4 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "UITableView+Chemistry";
+			productName = "UITableView+Chemistry";
+			productReference = D07EAE0E1EC30EB700323BCC /* UITableView+Chemistry.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D07EAE261EC30EB700323BCC /* UITableView+ChemistryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D07EAE3E1EC30EB700323BCC /* Build configuration list for PBXNativeTarget "UITableView+ChemistryTests" */;
+			buildPhases = (
+				D07EAE231EC30EB700323BCC /* Sources */,
+				D07EAE241EC30EB700323BCC /* Frameworks */,
+				D07EAE251EC30EB700323BCC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D07EAE291EC30EB700323BCC /* PBXTargetDependency */,
+			);
+			name = "UITableView+ChemistryTests";
+			productName = "UITableView+ChemistryTests";
+			productReference = D07EAE271EC30EB700323BCC /* UITableView+ChemistryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D07EAE311EC30EB700323BCC /* UITableView+ChemistryUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D07EAE411EC30EB700323BCC /* Build configuration list for PBXNativeTarget "UITableView+ChemistryUITests" */;
+			buildPhases = (
+				D07EAE2E1EC30EB700323BCC /* Sources */,
+				D07EAE2F1EC30EB700323BCC /* Frameworks */,
+				D07EAE301EC30EB700323BCC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D07EAE341EC30EB700323BCC /* PBXTargetDependency */,
+			);
+			name = "UITableView+ChemistryUITests";
+			productName = "UITableView+ChemistryUITests";
+			productReference = D07EAE321EC30EB700323BCC /* UITableView+ChemistryUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D07EAE061EC30EB700323BCC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Justin;
+				TargetAttributes = {
+					D07EAE0D1EC30EB700323BCC = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 5UB324DE42;
+						ProvisioningStyle = Automatic;
+					};
+					D07EAE261EC30EB700323BCC = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 5UB324DE42;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D07EAE0D1EC30EB700323BCC;
+					};
+					D07EAE311EC30EB700323BCC = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 5UB324DE42;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D07EAE0D1EC30EB700323BCC;
+					};
+				};
+			};
+			buildConfigurationList = D07EAE091EC30EB700323BCC /* Build configuration list for PBXProject "UITableView+Chemistry" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D07EAE051EC30EB700323BCC;
+			productRefGroup = D07EAE0F1EC30EB700323BCC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D07EAE0D1EC30EB700323BCC /* UITableView+Chemistry */,
+				D07EAE261EC30EB700323BCC /* UITableView+ChemistryTests */,
+				D07EAE311EC30EB700323BCC /* UITableView+ChemistryUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D07EAE0C1EC30EB700323BCC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D07EAE211EC30EB700323BCC /* LaunchScreen.storyboard in Resources */,
+				D07EAE1E1EC30EB700323BCC /* Assets.xcassets in Resources */,
+				D07EAE1C1EC30EB700323BCC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D07EAE251EC30EB700323BCC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D07EAE301EC30EB700323BCC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2882E91CEDB3FBBA41DF139F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UITableView+Chemistry/Pods-UITableView+Chemistry-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6C77AAD3C2A90538A6518723 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F12A2297145CF5FC579C85E4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UITableView+Chemistry/Pods-UITableView+Chemistry-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D07EAE0A1EC30EB700323BCC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D07EAE191EC30EB700323BCC /* ViewController.m in Sources */,
+				D07EAE161EC30EB700323BCC /* AppDelegate.m in Sources */,
+				D07EAE131EC30EB700323BCC /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D07EAE231EC30EB700323BCC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D07EAE2C1EC30EB700323BCC /* UITableView_ChemistryTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D07EAE2E1EC30EB700323BCC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D07EAE371EC30EB700323BCC /* UITableView_ChemistryUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D07EAE291EC30EB700323BCC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D07EAE0D1EC30EB700323BCC /* UITableView+Chemistry */;
+			targetProxy = D07EAE281EC30EB700323BCC /* PBXContainerItemProxy */;
+		};
+		D07EAE341EC30EB700323BCC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D07EAE0D1EC30EB700323BCC /* UITableView+Chemistry */;
+			targetProxy = D07EAE331EC30EB700323BCC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D07EAE1A1EC30EB700323BCC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D07EAE1B1EC30EB700323BCC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D07EAE1F1EC30EB700323BCC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D07EAE201EC30EB700323BCC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D07EAE391EC30EB700323BCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D07EAE3A1EC30EB700323BCC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D07EAE3C1EC30EB700323BCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F3933609E5ECDA9988B3BD1 /* Pods-UITableView+Chemistry.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5UB324DE42;
+				INFOPLIST_FILE = "UITableView+Chemistry/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Justin.TouchID-Demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Pods/Masonry\"/**";
+			};
+			name = Debug;
+		};
+		D07EAE3D1EC30EB700323BCC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF3501A107CE17DC6E60D99D /* Pods-UITableView+Chemistry.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5UB324DE42;
+				INFOPLIST_FILE = "UITableView+Chemistry/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Justin.TouchID-Demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Pods/Masonry\"/**";
+			};
+			name = Release;
+		};
+		D07EAE3F1EC30EB700323BCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 5UB324DE42;
+				INFOPLIST_FILE = "UITableView+ChemistryTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Justin.UITableView-ChemistryTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UITableView+Chemistry.app/UITableView+Chemistry";
+			};
+			name = Debug;
+		};
+		D07EAE401EC30EB700323BCC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 5UB324DE42;
+				INFOPLIST_FILE = "UITableView+ChemistryTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Justin.UITableView-ChemistryTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UITableView+Chemistry.app/UITableView+Chemistry";
+			};
+			name = Release;
+		};
+		D07EAE421EC30EB700323BCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 5UB324DE42;
+				INFOPLIST_FILE = "UITableView+ChemistryUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Justin.UITableView-ChemistryUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "UITableView+Chemistry";
+			};
+			name = Debug;
+		};
+		D07EAE431EC30EB700323BCC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 5UB324DE42;
+				INFOPLIST_FILE = "UITableView+ChemistryUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Justin.UITableView-ChemistryUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "UITableView+Chemistry";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D07EAE091EC30EB700323BCC /* Build configuration list for PBXProject "UITableView+Chemistry" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D07EAE391EC30EB700323BCC /* Debug */,
+				D07EAE3A1EC30EB700323BCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D07EAE3B1EC30EB700323BCC /* Build configuration list for PBXNativeTarget "UITableView+Chemistry" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D07EAE3C1EC30EB700323BCC /* Debug */,
+				D07EAE3D1EC30EB700323BCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D07EAE3E1EC30EB700323BCC /* Build configuration list for PBXNativeTarget "UITableView+ChemistryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D07EAE3F1EC30EB700323BCC /* Debug */,
+				D07EAE401EC30EB700323BCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D07EAE411EC30EB700323BCC /* Build configuration list for PBXNativeTarget "UITableView+ChemistryUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D07EAE421EC30EB700323BCC /* Debug */,
+				D07EAE431EC30EB700323BCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D07EAE061EC30EB700323BCC /* Project object */;
+}
