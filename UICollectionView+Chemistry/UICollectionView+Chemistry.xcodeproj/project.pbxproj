@@ -1,0 +1,649 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D07EAE521EC3461F00323BCC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D07EAE511EC3461F00323BCC /* main.m */; };
+		D07EAE551EC3461F00323BCC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D07EAE541EC3461F00323BCC /* AppDelegate.m */; };
+		D07EAE581EC3461F00323BCC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D07EAE571EC3461F00323BCC /* ViewController.m */; };
+		D07EAE5B1EC3461F00323BCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D07EAE591EC3461F00323BCC /* Main.storyboard */; };
+		D07EAE5D1EC3461F00323BCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D07EAE5C1EC3461F00323BCC /* Assets.xcassets */; };
+		D07EAE601EC3461F00323BCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D07EAE5E1EC3461F00323BCC /* LaunchScreen.storyboard */; };
+		D07EAE6B1EC3461F00323BCC /* UICollectionView_ChemistryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D07EAE6A1EC3461F00323BCC /* UICollectionView_ChemistryTests.m */; };
+		D07EAE761EC3461F00323BCC /* UICollectionView_ChemistryUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D07EAE751EC3461F00323BCC /* UICollectionView_ChemistryUITests.m */; };
+		D07EAE871EC347A500323BCC /* JHCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D07EAE861EC347A500323BCC /* JHCollectionViewCell.m */; };
+		D07EAE8A1EC3592200323BCC /* JHCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D07EAE891EC3592200323BCC /* JHCollectionReusableView.m */; };
+		DFD4863244EC3E4ED221ED0A /* libPods-UICollectionView+Chemistry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E99D50BF8D2D23F9FDD10C8 /* libPods-UICollectionView+Chemistry.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D07EAE671EC3461F00323BCC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D07EAE451EC3461E00323BCC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D07EAE4C1EC3461F00323BCC;
+			remoteInfo = "UICollectionView+Chemistry";
+		};
+		D07EAE721EC3461F00323BCC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D07EAE451EC3461E00323BCC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D07EAE4C1EC3461F00323BCC;
+			remoteInfo = "UICollectionView+Chemistry";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5E99D50BF8D2D23F9FDD10C8 /* libPods-UICollectionView+Chemistry.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UICollectionView+Chemistry.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CE32C788E34D3A426FEE5B1 /* Pods-UICollectionView+Chemistry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UICollectionView+Chemistry.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UICollectionView+Chemistry/Pods-UICollectionView+Chemistry.debug.xcconfig"; sourceTree = "<group>"; };
+		D07EAE4D1EC3461F00323BCC /* UICollectionView+Chemistry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UICollectionView+Chemistry.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D07EAE511EC3461F00323BCC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D07EAE531EC3461F00323BCC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D07EAE541EC3461F00323BCC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D07EAE561EC3461F00323BCC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D07EAE571EC3461F00323BCC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D07EAE5A1EC3461F00323BCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D07EAE5C1EC3461F00323BCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D07EAE5F1EC3461F00323BCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D07EAE611EC3461F00323BCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D07EAE661EC3461F00323BCC /* UICollectionView+ChemistryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UICollectionView+ChemistryTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D07EAE6A1EC3461F00323BCC /* UICollectionView_ChemistryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UICollectionView_ChemistryTests.m; sourceTree = "<group>"; };
+		D07EAE6C1EC3461F00323BCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D07EAE711EC3461F00323BCC /* UICollectionView+ChemistryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UICollectionView+ChemistryUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D07EAE751EC3461F00323BCC /* UICollectionView_ChemistryUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UICollectionView_ChemistryUITests.m; sourceTree = "<group>"; };
+		D07EAE771EC3461F00323BCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D07EAE851EC347A500323BCC /* JHCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHCollectionViewCell.h; sourceTree = "<group>"; };
+		D07EAE861EC347A500323BCC /* JHCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHCollectionViewCell.m; sourceTree = "<group>"; };
+		D07EAE881EC3592200323BCC /* JHCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHCollectionReusableView.h; sourceTree = "<group>"; };
+		D07EAE891EC3592200323BCC /* JHCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHCollectionReusableView.m; sourceTree = "<group>"; };
+		E52EE5F1661C37EDDD57A00A /* Pods-UICollectionView+Chemistry.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UICollectionView+Chemistry.release.xcconfig"; path = "Pods/Target Support Files/Pods-UICollectionView+Chemistry/Pods-UICollectionView+Chemistry.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D07EAE4A1EC3461F00323BCC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFD4863244EC3E4ED221ED0A /* libPods-UICollectionView+Chemistry.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D07EAE631EC3461F00323BCC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D07EAE6E1EC3461F00323BCC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B577E3D8B7E1FDC56A1C21A8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9CE32C788E34D3A426FEE5B1 /* Pods-UICollectionView+Chemistry.debug.xcconfig */,
+				E52EE5F1661C37EDDD57A00A /* Pods-UICollectionView+Chemistry.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CF02B65519236C5662D845CD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5E99D50BF8D2D23F9FDD10C8 /* libPods-UICollectionView+Chemistry.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D07EAE441EC3461E00323BCC = {
+			isa = PBXGroup;
+			children = (
+				D07EAE4F1EC3461F00323BCC /* UICollectionView+Chemistry */,
+				D07EAE691EC3461F00323BCC /* UICollectionView+ChemistryTests */,
+				D07EAE741EC3461F00323BCC /* UICollectionView+ChemistryUITests */,
+				D07EAE4E1EC3461F00323BCC /* Products */,
+				B577E3D8B7E1FDC56A1C21A8 /* Pods */,
+				CF02B65519236C5662D845CD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D07EAE4E1EC3461F00323BCC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D07EAE4D1EC3461F00323BCC /* UICollectionView+Chemistry.app */,
+				D07EAE661EC3461F00323BCC /* UICollectionView+ChemistryTests.xctest */,
+				D07EAE711EC3461F00323BCC /* UICollectionView+ChemistryUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D07EAE4F1EC3461F00323BCC /* UICollectionView+Chemistry */ = {
+			isa = PBXGroup;
+			children = (
+				D07EAE841EC3475000323BCC /* Other */,
+				D07EAE831EC3474100323BCC /* View */,
+				D07EAE501EC3461F00323BCC /* Supporting Files */,
+			);
+			path = "UICollectionView+Chemistry";
+			sourceTree = "<group>";
+		};
+		D07EAE501EC3461F00323BCC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D07EAE511EC3461F00323BCC /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D07EAE691EC3461F00323BCC /* UICollectionView+ChemistryTests */ = {
+			isa = PBXGroup;
+			children = (
+				D07EAE6A1EC3461F00323BCC /* UICollectionView_ChemistryTests.m */,
+				D07EAE6C1EC3461F00323BCC /* Info.plist */,
+			);
+			path = "UICollectionView+ChemistryTests";
+			sourceTree = "<group>";
+		};
+		D07EAE741EC3461F00323BCC /* UICollectionView+ChemistryUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D07EAE751EC3461F00323BCC /* UICollectionView_ChemistryUITests.m */,
+				D07EAE771EC3461F00323BCC /* Info.plist */,
+			);
+			path = "UICollectionView+ChemistryUITests";
+			sourceTree = "<group>";
+		};
+		D07EAE831EC3474100323BCC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D07EAE851EC347A500323BCC /* JHCollectionViewCell.h */,
+				D07EAE861EC347A500323BCC /* JHCollectionViewCell.m */,
+				D07EAE881EC3592200323BCC /* JHCollectionReusableView.h */,
+				D07EAE891EC3592200323BCC /* JHCollectionReusableView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		D07EAE841EC3475000323BCC /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				D07EAE531EC3461F00323BCC /* AppDelegate.h */,
+				D07EAE541EC3461F00323BCC /* AppDelegate.m */,
+				D07EAE561EC3461F00323BCC /* ViewController.h */,
+				D07EAE571EC3461F00323BCC /* ViewController.m */,
+				D07EAE591EC3461F00323BCC /* Main.storyboard */,
+				D07EAE5C1EC3461F00323BCC /* Assets.xcassets */,
+				D07EAE5E1EC3461F00323BCC /* LaunchScreen.storyboard */,
+				D07EAE611EC3461F00323BCC /* Info.plist */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D07EAE4C1EC3461F00323BCC /* UICollectionView+Chemistry */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D07EAE7A1EC3461F00323BCC /* Build configuration list for PBXNativeTarget "UICollectionView+Chemistry" */;
+			buildPhases = (
+				4DBD62E55AEE635C35A99E8D /* [CP] Check Pods Manifest.lock */,
+				D07EAE491EC3461F00323BCC /* Sources */,
+				D07EAE4A1EC3461F00323BCC /* Frameworks */,
+				D07EAE4B1EC3461F00323BCC /* Resources */,
+				F8E6B0912971204050D4DABE /* [CP] Embed Pods Frameworks */,
+				91FF01187CEAC7E21E4480FE /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "UICollectionView+Chemistry";
+			productName = "UICollectionView+Chemistry";
+			productReference = D07EAE4D1EC3461F00323BCC /* UICollectionView+Chemistry.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D07EAE651EC3461F00323BCC /* UICollectionView+ChemistryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D07EAE7D1EC3461F00323BCC /* Build configuration list for PBXNativeTarget "UICollectionView+ChemistryTests" */;
+			buildPhases = (
+				D07EAE621EC3461F00323BCC /* Sources */,
+				D07EAE631EC3461F00323BCC /* Frameworks */,
+				D07EAE641EC3461F00323BCC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D07EAE681EC3461F00323BCC /* PBXTargetDependency */,
+			);
+			name = "UICollectionView+ChemistryTests";
+			productName = "UICollectionView+ChemistryTests";
+			productReference = D07EAE661EC3461F00323BCC /* UICollectionView+ChemistryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D07EAE701EC3461F00323BCC /* UICollectionView+ChemistryUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D07EAE801EC3461F00323BCC /* Build configuration list for PBXNativeTarget "UICollectionView+ChemistryUITests" */;
+			buildPhases = (
+				D07EAE6D1EC3461F00323BCC /* Sources */,
+				D07EAE6E1EC3461F00323BCC /* Frameworks */,
+				D07EAE6F1EC3461F00323BCC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D07EAE731EC3461F00323BCC /* PBXTargetDependency */,
+			);
+			name = "UICollectionView+ChemistryUITests";
+			productName = "UICollectionView+ChemistryUITests";
+			productReference = D07EAE711EC3461F00323BCC /* UICollectionView+ChemistryUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D07EAE451EC3461E00323BCC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Justin;
+				TargetAttributes = {
+					D07EAE4C1EC3461F00323BCC = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 5UB324DE42;
+						ProvisioningStyle = Automatic;
+					};
+					D07EAE651EC3461F00323BCC = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 5UB324DE42;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D07EAE4C1EC3461F00323BCC;
+					};
+					D07EAE701EC3461F00323BCC = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 5UB324DE42;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D07EAE4C1EC3461F00323BCC;
+					};
+				};
+			};
+			buildConfigurationList = D07EAE481EC3461E00323BCC /* Build configuration list for PBXProject "UICollectionView+Chemistry" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D07EAE441EC3461E00323BCC;
+			productRefGroup = D07EAE4E1EC3461F00323BCC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D07EAE4C1EC3461F00323BCC /* UICollectionView+Chemistry */,
+				D07EAE651EC3461F00323BCC /* UICollectionView+ChemistryTests */,
+				D07EAE701EC3461F00323BCC /* UICollectionView+ChemistryUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D07EAE4B1EC3461F00323BCC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D07EAE601EC3461F00323BCC /* LaunchScreen.storyboard in Resources */,
+				D07EAE5D1EC3461F00323BCC /* Assets.xcassets in Resources */,
+				D07EAE5B1EC3461F00323BCC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D07EAE641EC3461F00323BCC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D07EAE6F1EC3461F00323BCC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4DBD62E55AEE635C35A99E8D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		91FF01187CEAC7E21E4480FE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UICollectionView+Chemistry/Pods-UICollectionView+Chemistry-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8E6B0912971204050D4DABE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UICollectionView+Chemistry/Pods-UICollectionView+Chemistry-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D07EAE491EC3461F00323BCC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D07EAE581EC3461F00323BCC /* ViewController.m in Sources */,
+				D07EAE551EC3461F00323BCC /* AppDelegate.m in Sources */,
+				D07EAE8A1EC3592200323BCC /* JHCollectionReusableView.m in Sources */,
+				D07EAE871EC347A500323BCC /* JHCollectionViewCell.m in Sources */,
+				D07EAE521EC3461F00323BCC /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D07EAE621EC3461F00323BCC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D07EAE6B1EC3461F00323BCC /* UICollectionView_ChemistryTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D07EAE6D1EC3461F00323BCC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D07EAE761EC3461F00323BCC /* UICollectionView_ChemistryUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D07EAE681EC3461F00323BCC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D07EAE4C1EC3461F00323BCC /* UICollectionView+Chemistry */;
+			targetProxy = D07EAE671EC3461F00323BCC /* PBXContainerItemProxy */;
+		};
+		D07EAE731EC3461F00323BCC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D07EAE4C1EC3461F00323BCC /* UICollectionView+Chemistry */;
+			targetProxy = D07EAE721EC3461F00323BCC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D07EAE591EC3461F00323BCC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D07EAE5A1EC3461F00323BCC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D07EAE5E1EC3461F00323BCC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D07EAE5F1EC3461F00323BCC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D07EAE781EC3461F00323BCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D07EAE791EC3461F00323BCC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D07EAE7B1EC3461F00323BCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CE32C788E34D3A426FEE5B1 /* Pods-UICollectionView+Chemistry.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5UB324DE42;
+				INFOPLIST_FILE = "UICollectionView+Chemistry/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Justin.UITableView-Chemistry";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Pods/Masonry\"/**";
+			};
+			name = Debug;
+		};
+		D07EAE7C1EC3461F00323BCC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E52EE5F1661C37EDDD57A00A /* Pods-UICollectionView+Chemistry.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5UB324DE42;
+				INFOPLIST_FILE = "UICollectionView+Chemistry/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Justin.UITableView-Chemistry";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Pods/Masonry\"/**";
+			};
+			name = Release;
+		};
+		D07EAE7E1EC3461F00323BCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 5UB324DE42;
+				INFOPLIST_FILE = "UICollectionView+ChemistryTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Justin.UICollectionView-ChemistryTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UICollectionView+Chemistry.app/UICollectionView+Chemistry";
+			};
+			name = Debug;
+		};
+		D07EAE7F1EC3461F00323BCC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 5UB324DE42;
+				INFOPLIST_FILE = "UICollectionView+ChemistryTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Justin.UICollectionView-ChemistryTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UICollectionView+Chemistry.app/UICollectionView+Chemistry";
+			};
+			name = Release;
+		};
+		D07EAE811EC3461F00323BCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 5UB324DE42;
+				INFOPLIST_FILE = "UICollectionView+ChemistryUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Justin.UICollectionView-ChemistryUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "UICollectionView+Chemistry";
+			};
+			name = Debug;
+		};
+		D07EAE821EC3461F00323BCC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 5UB324DE42;
+				INFOPLIST_FILE = "UICollectionView+ChemistryUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Justin.UICollectionView-ChemistryUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "UICollectionView+Chemistry";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D07EAE481EC3461E00323BCC /* Build configuration list for PBXProject "UICollectionView+Chemistry" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D07EAE781EC3461F00323BCC /* Debug */,
+				D07EAE791EC3461F00323BCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D07EAE7A1EC3461F00323BCC /* Build configuration list for PBXNativeTarget "UICollectionView+Chemistry" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D07EAE7B1EC3461F00323BCC /* Debug */,
+				D07EAE7C1EC3461F00323BCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D07EAE7D1EC3461F00323BCC /* Build configuration list for PBXNativeTarget "UICollectionView+ChemistryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D07EAE7E1EC3461F00323BCC /* Debug */,
+				D07EAE7F1EC3461F00323BCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D07EAE801EC3461F00323BCC /* Build configuration list for PBXNativeTarget "UICollectionView+ChemistryUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D07EAE811EC3461F00323BCC /* Debug */,
+				D07EAE821EC3461F00323BCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D07EAE451EC3461E00323BCC /* Project object */;
+}
