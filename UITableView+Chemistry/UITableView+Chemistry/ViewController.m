@@ -19,7 +19,6 @@
 
 @property (strong, nonatomic) UITableView *leftTableView;
 @property (strong, nonatomic) UITableView *rightTableView;
-
 @property (strong, nonatomic) NSMutableArray *leftArray;
 @property (strong, nonatomic) NSMutableArray *rightArray;
 @property (assign, nonatomic) BOOL isFirstDisplay;
@@ -140,19 +139,16 @@
         NSIndexPath *indexPath = [[self.rightTableView indexPathsForVisibleRows ] objectAtIndex:0];
         [self.leftTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:indexPath.section inSection:0] animated:NO scrollPosition:UITableViewScrollPositionNone];
     }
-    
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     if (scrollView == self.rightTableView) {
         NSIndexPath *indexPath = [[self.rightTableView indexPathsForVisibleRows ] objectAtIndex:0];
         [self.leftTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:indexPath.section inSection:0] animated:NO scrollPosition:UITableViewScrollPositionNone];
-        
     }
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    
     if (tableView == self.leftTableView && _isFirstDisplay) {
         [self.leftTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:indexPath.row inSection:0] animated:YES scrollPosition:UITableViewScrollPositionMiddle];
         _isFirstDisplay = NO;
