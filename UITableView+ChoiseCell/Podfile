@@ -1,0 +1,7 @@
+platform :ios, '8.0'
+
+target "UITableView+ChoiseCell" do 
+
+pod 'Masonry'
+
+end

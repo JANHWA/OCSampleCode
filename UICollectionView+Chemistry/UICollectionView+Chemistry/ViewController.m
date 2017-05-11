@@ -134,7 +134,9 @@
        return self.leftArray.count;
     } else {
         NSArray *array = self.rightArray[section];
-        return array.count;
+        NSUInteger rowCount = array.count/3 == 0?1:array.count/3 + 1;
+//        return rowCount * 3;
+        return (rowCount * 3 > 12 || rowCount * 3 == 12)?12:rowCount *3;
     }
 }
 
@@ -145,9 +147,9 @@
         return cell;
     } else {
         JHCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:RIGHTCELL forIndexPath:indexPath];
-//        cell.layer.borderColor = [UIColor grayColor].CGColor;
-//        cell.layer.borderWidth = 1;
-        [cell showContentTitle:self.rightArray[indexPath.section][indexPath.row]];
+        cell.layer.borderColor = [UIColor grayColor].CGColor;
+        cell.layer.borderWidth = 1;
+        [cell showContentTitle:[NSString stringWithFormat:@"%ld",indexPath.row]];
         return cell;
     }
 }
@@ -162,23 +164,12 @@
         return nil;
     }
 }
-
-//- (nullable UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath {
-//    
-//    
-//    UICollectionViewLayoutAttributes *layoutAttributes = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
-//    UICollectionViewCell *cell = [self.rightCollectionView cellForItemAtIndexPath:indexPath];
-//    layoutAttributes.frame = cell.bounds;
-//    return layoutAttributes;
-//}
-//- (nullable UICollectionViewLayoutAttributes *)layoutAttributesForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath;
-
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return CGSizeMake(SCREENWIDTH * 0.75 * 0.32, SCREENWIDTH * 0.75 * 0.333 * 0.333);
+    return CGSizeMake(SCREENWIDTH * 0.75 * 0.30, SCREENWIDTH * 0.75 * 0.333 * 0.333);
 }
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
-    return UIEdgeInsetsMake(5, 10, 5, 12);
+    return UIEdgeInsetsMake(5, 13, 5, 15);
 }
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section{
     return 1;
