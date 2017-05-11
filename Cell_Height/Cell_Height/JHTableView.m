@@ -58,6 +58,8 @@
         _cellForRow = cellForRow;
         [view addSubview:self.tableView];
         [self layoutView:view];
+        [self configTableViewFooterView:self.tableView];
+        [self configTableViewHeaderView:self.tableView];
     }
     return self;
 }
@@ -102,6 +104,13 @@
     });
 }
 
+- (void)configTableViewFooterView:(UITableView *)tableView {
+    [tableView setTableFooterView:[[UIView alloc] init]];
+}
+
+- (void)configTableViewHeaderView:(UITableView *)tableView {
+    [tableView setTableHeaderView:[[UIView alloc] init]];
+}
 #pragma mark - protocol Method
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

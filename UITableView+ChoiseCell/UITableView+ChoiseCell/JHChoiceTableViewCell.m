@@ -20,7 +20,6 @@
 #pragma mark - lazy Method
 
 - (UIButton *)button {
-    
     if (_button == nil) {
         _button = [UIButton buttonWithType:UIButtonTypeCustom];
         [_button setBackgroundImage:[UIImage imageNamed:@"button_unselect"] forState:UIControlStateNormal];
@@ -32,34 +31,22 @@
 }
 
 - (UILabel *)titleLabel {
-    
     if (_titleLabel == nil) {
         _titleLabel = [[UILabel alloc] init];
         _titleLabel.font = [UIFont systemFontOfSize:15.0];
         [self.contentView addSubview:_titleLabel];
     }
-    
     return _titleLabel;
 }
 #pragma mark - initial Method
 
-- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
-{
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    if (self) {
-        [self layout];
-    }
-    return self;
-}
-
 #pragma mark - private Method
-
-- (void)layout {
-    
+- (void)layoutSubviews {
+    [super layoutSubviews];
     [self.button mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.contentView).offset(15);
         make.centerY.equalTo(self.contentView);
-        make.width.height.equalTo(self.contentView.mas_height).multipliedBy(0.6);
+        make.width.height.equalTo(self.contentView.mas_height).multipliedBy(0.5);
     }];
     
     [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -77,12 +64,7 @@
 }
 
 - (void)showContentWithModel:(JHChoiceModel *)model {
-    
-    if (model.state == 1) {
-        self.button.selected = YES;
-    } else {
-        self.button.selected = NO;
-    }
+   self.button.selected = (model.state == 1)?YES:NO;
     self.titleLabel.text = model.title;
 }
 

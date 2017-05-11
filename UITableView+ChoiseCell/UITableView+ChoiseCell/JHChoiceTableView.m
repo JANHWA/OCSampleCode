@@ -12,7 +12,6 @@
 @implementation JHChoiceTableView
 
 - (void)layoutView:(UIView *)view {
-    
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(view).insets(UIEdgeInsetsMake(20, 0, 0, 0));
     }];

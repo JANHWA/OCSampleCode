@@ -25,7 +25,6 @@ typedef void(^didSelectBlock)(NSIndexPath *indexPath);
  */
 @property (strong, nonatomic) UITableView *tableView;
 
-
 //__________________________________________________________________________________________________
 //这是一条华丽的分割线，以下是方法。
 
@@ -62,5 +61,20 @@ typedef void(^didSelectBlock)(NSIndexPath *indexPath);
  @param array 数据源
  */
 - (void)reloadWithData:(NSArray *)array;
+
+
+/**
+ 配置headerView(默认设置CGSizeZeroo)
+
+ @param tableView tableView description
+ */
+- (void)configTableViewHeaderView:(UITableView *)tableView;
+
+/**
+ 配置footerView(默认设置CGSizeZeroo)
+ 
+ @param tableView tableView description
+ */
+- (void)configTableViewFooterView:(UITableView *)tableView;
 
 @end
