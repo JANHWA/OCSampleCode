@@ -11,6 +11,6 @@
 @interface JHChoiceModel : NSObject
 
 @property (copy, nonatomic) NSString *title;
-@property (assign, nonatomic) NSUInteger state;//0:未选择 1：已选贼
+@property (assign, nonatomic) NSUInteger state;//0:未选择 1：已选择
 
 @end
