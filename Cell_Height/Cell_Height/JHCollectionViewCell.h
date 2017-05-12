@@ -8,8 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^ButtonBlock)(UIButton *sender);
+
 @interface JHCollectionViewCell : UICollectionViewCell
 
 @property (strong, nonatomic) UIImageView *imageV;
+@property (strong, nonatomic) UIButton *deleBtn;
+
+
+- (void)showContentWithImageName:(NSString *)imageName;
+
+@property (copy, nonatomic) ButtonBlock btnBlock;
 
 @end

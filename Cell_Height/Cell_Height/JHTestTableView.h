@@ -10,4 +10,6 @@
 
 @interface JHTestTableView : JHTableView
 
+@property (strong, nonatomic) NSMutableArray *photoArray;
+
 @end
