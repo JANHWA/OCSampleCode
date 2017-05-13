@@ -20,6 +20,11 @@
 		D04132781EC4B95A00C686FA /* JHChoiceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D04132771EC4B95A00C686FA /* JHChoiceModel.m */; };
 		D041327D1EC4C9FC00C686FA /* JHChoiceTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D041327A1EC4C9FC00C686FA /* JHChoiceTableView.m */; };
 		D041327E1EC4C9FC00C686FA /* JHChoiceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D041327C1EC4C9FC00C686FA /* JHChoiceTableViewCell.m */; };
+		D04132FA1EC69F0E00C686FA /* JHTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D04132F91EC69F0E00C686FA /* JHTwoViewController.m */; };
+		D04132FD1EC69F3300C686FA /* JHOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D04132FC1EC69F3300C686FA /* JHOneViewController.m */; };
+		D04133001EC6A01000C686FA /* JHHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D04132FF1EC6A01000C686FA /* JHHomeViewController.m */; };
+		D04133031EC6A66800C686FA /* JHFriendsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D04133021EC6A66800C686FA /* JHFriendsTableView.m */; };
+		D04133061EC6A6C400C686FA /* JHSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D04133051EC6A6C400C686FA /* JHSectionHeaderView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +72,16 @@
 		D041327A1EC4C9FC00C686FA /* JHChoiceTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JHChoiceTableView.m; path = "UITableView+ChoiseCell/JHChoiceTableView.m"; sourceTree = "<group>"; };
 		D041327B1EC4C9FC00C686FA /* JHChoiceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JHChoiceTableViewCell.h; path = "UITableView+ChoiseCell/JHChoiceTableViewCell.h"; sourceTree = "<group>"; };
 		D041327C1EC4C9FC00C686FA /* JHChoiceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JHChoiceTableViewCell.m; path = "UITableView+ChoiseCell/JHChoiceTableViewCell.m"; sourceTree = "<group>"; };
+		D04132F81EC69F0E00C686FA /* JHTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHTwoViewController.h; sourceTree = "<group>"; };
+		D04132F91EC69F0E00C686FA /* JHTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHTwoViewController.m; sourceTree = "<group>"; };
+		D04132FB1EC69F3300C686FA /* JHOneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHOneViewController.h; sourceTree = "<group>"; };
+		D04132FC1EC69F3300C686FA /* JHOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHOneViewController.m; sourceTree = "<group>"; };
+		D04132FE1EC6A01000C686FA /* JHHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHHomeViewController.h; sourceTree = "<group>"; };
+		D04132FF1EC6A01000C686FA /* JHHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHHomeViewController.m; sourceTree = "<group>"; };
+		D04133011EC6A66800C686FA /* JHFriendsTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHFriendsTableView.h; sourceTree = "<group>"; };
+		D04133021EC6A66800C686FA /* JHFriendsTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHFriendsTableView.m; sourceTree = "<group>"; };
+		D04133041EC6A6C400C686FA /* JHSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHSectionHeaderView.h; sourceTree = "<group>"; };
+		D04133051EC6A6C400C686FA /* JHSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHSectionHeaderView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +143,7 @@
 		D04132371EC4B1F600C686FA /* UITableView+ChoiseCell */ = {
 			isa = PBXGroup;
 			children = (
+				D04132F31EC69E4600C686FA /* Controller */,
 				D04132751EC4B93F00C686FA /* Model */,
 				D041326E1EC4B2FE00C686FA /* View */,
 				D041323B1EC4B1F600C686FA /* AppDelegate.h */,
@@ -178,6 +194,10 @@
 				D041327C1EC4C9FC00C686FA /* JHChoiceTableViewCell.m */,
 				D041326B1EC4B22800C686FA /* JHTableView.h */,
 				D041326C1EC4B22800C686FA /* JHTableView.m */,
+				D04133011EC6A66800C686FA /* JHFriendsTableView.h */,
+				D04133021EC6A66800C686FA /* JHFriendsTableView.m */,
+				D04133041EC6A6C400C686FA /* JHSectionHeaderView.h */,
+				D04133051EC6A6C400C686FA /* JHSectionHeaderView.m */,
 			);
 			name = View;
 			path = ..;
@@ -190,6 +210,19 @@
 				D04132771EC4B95A00C686FA /* JHChoiceModel.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		D04132F31EC69E4600C686FA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D04132F81EC69F0E00C686FA /* JHTwoViewController.h */,
+				D04132F91EC69F0E00C686FA /* JHTwoViewController.m */,
+				D04132FB1EC69F3300C686FA /* JHOneViewController.h */,
+				D04132FC1EC69F3300C686FA /* JHOneViewController.m */,
+				D04132FE1EC6A01000C686FA /* JHHomeViewController.h */,
+				D04132FF1EC6A01000C686FA /* JHHomeViewController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 		F657E1E9B520C5022917DEA2 /* Pods */ = {
@@ -266,6 +299,7 @@
 		D041322D1EC4B1F600C686FA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = JH;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = Justin;
 				TargetAttributes = {
@@ -391,10 +425,15 @@
 				D041327D1EC4C9FC00C686FA /* JHChoiceTableView.m in Sources */,
 				D041327E1EC4C9FC00C686FA /* JHChoiceTableViewCell.m in Sources */,
 				D04132401EC4B1F600C686FA /* ViewController.m in Sources */,
+				D04132FA1EC69F0E00C686FA /* JHTwoViewController.m in Sources */,
+				D04132FD1EC69F3300C686FA /* JHOneViewController.m in Sources */,
+				D04133001EC6A01000C686FA /* JHHomeViewController.m in Sources */,
 				D041326D1EC4B22800C686FA /* JHTableView.m in Sources */,
 				D04132781EC4B95A00C686FA /* JHChoiceModel.m in Sources */,
 				D041323D1EC4B1F600C686FA /* AppDelegate.m in Sources */,
+				D04133031EC6A66800C686FA /* JHFriendsTableView.m in Sources */,
 				D041323A1EC4B1F600C686FA /* main.m in Sources */,
+				D04133061EC6A6C400C686FA /* JHSectionHeaderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
