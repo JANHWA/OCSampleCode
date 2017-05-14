@@ -38,14 +38,16 @@
     __weak typeof(self) weakSelf = self;
     self.tableView = [[JHChoiceTableView alloc] initInView:self.view tableViewStyle:UITableViewStylePlain cellForRow:^UITableViewCell *(UITableView *tableView, NSIndexPath *indexPath) {
         
-        JHChoiceTableViewCell *cell = [JHChoiceTableViewCell showContentWithTableView:tableView indexPath:indexPath identifier:CELLID titleArray:weakSelf.dataArray];
+        JHChoiceTableViewCell *cell = [JHChoiceTableViewCell showContentWithTableView:tableView
+                                                                            indexPath:indexPath
+                                                                           identifier:CELLID
+                                                                           titleArray:weakSelf.dataArray];
         
         [cell buttonBlock:^(UIButton *sender) {
             [weakSelf selectItemWithIndexPath:indexPath];
         }];
         return cell;
     }];
-    
     [self.tableView didSelectRowAtIndexPath:^(NSIndexPath *indexPath) {
         [weakSelf selectItemWithIndexPath:indexPath];
     }];

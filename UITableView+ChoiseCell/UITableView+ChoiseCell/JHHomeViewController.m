@@ -7,7 +7,7 @@
 //
 
 #import "JHHomeViewController.h"
-
+#import "JHThreeViewController.h"
 #import "JHOneViewController.h"
 #import "JHTwoViewController.h"
 
@@ -42,7 +42,7 @@
     __weak typeof(self) weakSelf = self;
     self.tableView = [[JHChoiceTableView alloc] initInView:self.view tableViewStyle:UITableViewStylePlain cellForRow:^UITableViewCell *(UITableView *tableView, NSIndexPath *indexPath) {
         
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CELLID];
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CELLID forIndexPath:indexPath];
         cell.textLabel.text = weakSelf.dataArray[indexPath.row];
         return cell;
     }];
@@ -53,7 +53,7 @@
     }];
 }
 - (void)createData {
-    self.dataArray = [NSMutableArray arrayWithObjects:@"权限选择",@"cell的展开闭合", nil];
+    self.dataArray = [NSMutableArray arrayWithObjects:@"权限选择",@"cell的展开闭合",@"Storyboard",nil];
     [self.tableView reloadWithData:self.dataArray];
 }
 
@@ -61,9 +61,12 @@
     if (indexPath.row == 0) {
         JHOneViewController *oneVC = [[JHOneViewController alloc] init];
         [self.navigationController pushViewController:oneVC animated:YES];
-    } else {
+    } else if (indexPath.row == 1) {
         JHTwoViewController *twoVC = [[JHTwoViewController alloc] init];
         [self.navigationController pushViewController:twoVC animated:YES];
+    } else {
+        JHThreeViewController *threeVC = [[JHThreeViewController alloc] init];
+        [self.navigationController pushViewController:threeVC animated:YES];
     }
     
 }

@@ -30,6 +30,8 @@
 - (UIButton *)button {
     if (_button == nil) {
         _button = [UIButton buttonWithType:UIButtonTypeCustom];
+        _button.layer.borderColor = [UIColor grayColor].CGColor;
+        _button.layer.borderWidth = 1.0;
         [_button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [_button addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
     }

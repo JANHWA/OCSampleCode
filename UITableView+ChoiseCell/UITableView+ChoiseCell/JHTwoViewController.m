@@ -52,7 +52,7 @@
     self.tableView = [[JHFriendsTableView alloc] initInView:self.view
                                              tableViewStyle:UITableViewStyleGrouped
                                                  cellForRow:^UITableViewCell *(UITableView *tableView, NSIndexPath *indexPath) {
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:FriendsCellID];
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:FriendsCellID forIndexPath:indexPath];
         cell.textLabel.text = weakSelf.dataArray[indexPath.section][indexPath.row];
         return cell;
     }];

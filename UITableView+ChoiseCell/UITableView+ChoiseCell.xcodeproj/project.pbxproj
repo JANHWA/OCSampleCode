@@ -25,6 +25,10 @@
 		D04133001EC6A01000C686FA /* JHHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D04132FF1EC6A01000C686FA /* JHHomeViewController.m */; };
 		D04133031EC6A66800C686FA /* JHFriendsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D04133021EC6A66800C686FA /* JHFriendsTableView.m */; };
 		D04133061EC6A6C400C686FA /* JHSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D04133051EC6A6C400C686FA /* JHSectionHeaderView.m */; };
+		D099610E1EC88D0200505569 /* JHThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D099610C1EC88D0200505569 /* JHThreeViewController.m */; };
+		D099610F1EC88D0200505569 /* JHThreeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D099610D1EC88D0200505569 /* JHThreeViewController.xib */; };
+		D09961131EC88DF800505569 /* JHThreeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D09961111EC88DF800505569 /* JHThreeTableViewCell.m */; };
+		D09961141EC88DF800505569 /* JHThreeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D09961121EC88DF800505569 /* JHThreeTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +86,12 @@
 		D04133021EC6A66800C686FA /* JHFriendsTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHFriendsTableView.m; sourceTree = "<group>"; };
 		D04133041EC6A6C400C686FA /* JHSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHSectionHeaderView.h; sourceTree = "<group>"; };
 		D04133051EC6A6C400C686FA /* JHSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHSectionHeaderView.m; sourceTree = "<group>"; };
+		D099610B1EC88D0200505569 /* JHThreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHThreeViewController.h; sourceTree = "<group>"; };
+		D099610C1EC88D0200505569 /* JHThreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHThreeViewController.m; sourceTree = "<group>"; };
+		D099610D1EC88D0200505569 /* JHThreeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JHThreeViewController.xib; sourceTree = "<group>"; };
+		D09961101EC88DF800505569 /* JHThreeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHThreeTableViewCell.h; sourceTree = "<group>"; };
+		D09961111EC88DF800505569 /* JHThreeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHThreeTableViewCell.m; sourceTree = "<group>"; };
+		D09961121EC88DF800505569 /* JHThreeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JHThreeTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +208,9 @@
 				D04133021EC6A66800C686FA /* JHFriendsTableView.m */,
 				D04133041EC6A6C400C686FA /* JHSectionHeaderView.h */,
 				D04133051EC6A6C400C686FA /* JHSectionHeaderView.m */,
+				D09961101EC88DF800505569 /* JHThreeTableViewCell.h */,
+				D09961111EC88DF800505569 /* JHThreeTableViewCell.m */,
+				D09961121EC88DF800505569 /* JHThreeTableViewCell.xib */,
 			);
 			name = View;
 			path = ..;
@@ -221,6 +234,9 @@
 				D04132FC1EC69F3300C686FA /* JHOneViewController.m */,
 				D04132FE1EC6A01000C686FA /* JHHomeViewController.h */,
 				D04132FF1EC6A01000C686FA /* JHHomeViewController.m */,
+				D099610B1EC88D0200505569 /* JHThreeViewController.h */,
+				D099610C1EC88D0200505569 /* JHThreeViewController.m */,
+				D099610D1EC88D0200505569 /* JHThreeViewController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -350,6 +366,8 @@
 				D04132481EC4B1F600C686FA /* LaunchScreen.storyboard in Resources */,
 				D04132451EC4B1F600C686FA /* Assets.xcassets in Resources */,
 				D04132431EC4B1F600C686FA /* Main.storyboard in Resources */,
+				D099610F1EC88D0200505569 /* JHThreeViewController.xib in Resources */,
+				D09961141EC88DF800505569 /* JHThreeTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,8 +446,10 @@
 				D04132FA1EC69F0E00C686FA /* JHTwoViewController.m in Sources */,
 				D04132FD1EC69F3300C686FA /* JHOneViewController.m in Sources */,
 				D04133001EC6A01000C686FA /* JHHomeViewController.m in Sources */,
+				D09961131EC88DF800505569 /* JHThreeTableViewCell.m in Sources */,
 				D041326D1EC4B22800C686FA /* JHTableView.m in Sources */,
 				D04132781EC4B95A00C686FA /* JHChoiceModel.m in Sources */,
+				D099610E1EC88D0200505569 /* JHThreeViewController.m in Sources */,
 				D041323D1EC4B1F600C686FA /* AppDelegate.m in Sources */,
 				D04133031EC6A66800C686FA /* JHFriendsTableView.m in Sources */,
 				D041323A1EC4B1F600C686FA /* main.m in Sources */,
