@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="MhF-qO-4Oi">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--One-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U6a-tu-Ln1">
+                                <rect key="frame" x="154" y="321" width="51" height="24"/>
+                                <state key="normal" title="Push"/>
+                                <connections>
+                                    <segue destination="r70-wt-cjp" kind="show" id="xY9-36-lgY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="U6a-tu-Ln1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="257" id="316-XG-AXN"/>
+                            <constraint firstItem="U6a-tu-Ln1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="154" id="Q6f-fC-RcZ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="U6a-tu-Ln1" secondAttribute="bottom" constant="322" id="j03-Df-wtO"/>
+                            <constraint firstAttribute="trailing" secondItem="U6a-tu-Ln1" secondAttribute="trailing" constant="170" id="uT0-gx-YGw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="One" id="eKp-2M-TUQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1120.8" y="-545.57721139430294"/>
+        </scene>
+        <!--时尚之都-->
+        <scene sceneID="pTc-nP-k99">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" id="r70-wt-cjp" customClass="SecondViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="M0d-wR-BWS"/>
+                        <viewControllerLayoutGuide type="bottom" id="YaR-lm-O37"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="r66-Hu-OrY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="时尚之都" id="feJ-Ep-INC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8EF-4w-n3h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2026" y="-544"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mdd-d8-h2K">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MhF-qO-4Oi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xBU-Mh-bf7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="nfi-jO-Vy4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pNb-BC-gq7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="236" y="-543.77811094452773"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JHFirstViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VIIVA" translatesAutoresizingMaskIntoConstraints="NO" id="Qxc-kU-SjA">
+                    <rect key="frame" x="58" y="63" width="258" height="86"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="258" id="gAI-WX-CKP"/>
+                        <constraint firstAttribute="height" constant="86" id="hFq-up-cg1"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginbg" translatesAutoresizingMaskIntoConstraints="NO" id="Wqe-zL-Flg">
+                    <rect key="frame" x="16" y="213" width="343" height="210"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Wqe-zL-Flg" secondAttribute="height" multiplier="49:30" id="pfL-Lc-ZW3"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="密码" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GlD-Em-DSR">
+                    <rect key="frame" x="166" y="308" width="35" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g48-NC-gwV" userLabel="lineView">
+                    <rect key="frame" x="63" y="328" width="240" height="1"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="账号" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8mU-HJ-1Yu">
+                    <rect key="frame" x="166" y="264" width="35" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qa4-9q-xAe" userLabel="lineView">
+                    <rect key="frame" x="67" y="282" width="240" height="1"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Wqe-zL-Flg" firstAttribute="top" secondItem="Qxc-kU-SjA" secondAttribute="bottom" constant="64" id="3aJ-oI-T64"/>
+                <constraint firstItem="Wqe-zL-Flg" firstAttribute="leading" secondItem="8mU-HJ-1Yu" secondAttribute="trailing" constant="-185" id="6yO-Lj-usp"/>
+                <constraint firstItem="Wqe-zL-Flg" firstAttribute="top" secondItem="8mU-HJ-1Yu" secondAttribute="bottom" constant="-72" id="8wy-6b-I36"/>
+                <constraint firstItem="Qxc-kU-SjA" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="HoP-iA-zv2"/>
+                <constraint firstAttribute="trailing" secondItem="Wqe-zL-Flg" secondAttribute="trailing" constant="16" id="SpE-o1-zRY"/>
+                <constraint firstItem="GlD-Em-DSR" firstAttribute="trailing" secondItem="8mU-HJ-1Yu" secondAttribute="trailing" id="aHW-CT-GhD"/>
+                <constraint firstItem="GlD-Em-DSR" firstAttribute="top" secondItem="8mU-HJ-1Yu" secondAttribute="bottom" constant="23" id="fyj-RY-tUX"/>
+                <constraint firstItem="GlD-Em-DSR" firstAttribute="height" secondItem="8mU-HJ-1Yu" secondAttribute="height" id="id0-b5-LPQ"/>
+                <constraint firstItem="GlD-Em-DSR" firstAttribute="leading" secondItem="8mU-HJ-1Yu" secondAttribute="leading" id="kl9-AX-atF"/>
+                <constraint firstItem="Wqe-zL-Flg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="qxw-Bc-h1M"/>
+                <constraint firstItem="Qxc-kU-SjA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="63" id="uDK-Nm-OIr"/>
+            </constraints>
+            <point key="canvasLocation" x="-201.5" y="34.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="VIIVA" width="129" height="43"/>
+        <image name="loginbg" width="355" height="210"/>
+    </resources>
+</document>
