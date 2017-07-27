@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TuN-EJ-yB3">
+                                <rect key="frame" x="27" y="318" width="62" height="30"/>
+                                <state key="normal" title="添加数据"/>
+                                <connections>
+                                    <action selector="addData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3hB-y4-Ss5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9JH-RZ-BPa">
+                                <rect key="frame" x="115" y="318" width="62" height="30"/>
+                                <state key="normal" title="删除数据"/>
+                                <connections>
+                                    <action selector="deletedData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pze-Xf-Y8m"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bjU-w5-Ek5">
+                                <rect key="frame" x="202" y="318" width="62" height="30"/>
+                                <state key="normal" title="修改数据"/>
+                                <connections>
+                                    <action selector="changeData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ei8-sh-bsS"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="操作状态" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pP7-yi-YWw">
+                                <rect key="frame" x="-0.5" y="146" width="375" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vzD-Wo-HYW">
+                                <rect key="frame" x="291" y="318" width="62" height="30"/>
+                                <state key="normal" title="获取数据"/>
+                                <connections>
+                                    <action selector="getData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="62K-JS-7c1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9JH-RZ-BPa" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0uD-cf-7hP"/>
+                            <constraint firstItem="vzD-Wo-HYW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4HO-LE-hZ5"/>
+                            <constraint firstItem="9JH-RZ-BPa" firstAttribute="leading" secondItem="TuN-EJ-yB3" secondAttribute="trailing" constant="26" id="Apb-IP-29L"/>
+                            <constraint firstItem="vzD-Wo-HYW" firstAttribute="leading" secondItem="bjU-w5-Ek5" secondAttribute="trailing" constant="27" id="Nn3-3g-ZuO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vzD-Wo-HYW" secondAttribute="trailing" constant="6" id="VHZ-dt-v5j"/>
+                            <constraint firstItem="TuN-EJ-yB3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="11" id="boh-rn-WpT"/>
+                            <constraint firstItem="bjU-w5-Ek5" firstAttribute="leading" secondItem="9JH-RZ-BPa" secondAttribute="trailing" constant="25" id="dJf-yu-DEk"/>
+                            <constraint firstItem="TuN-EJ-yB3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dsf-ZU-psS"/>
+                            <constraint firstItem="pP7-yi-YWw" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="fPX-u2-Chz"/>
+                            <constraint firstItem="bjU-w5-Ek5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ftF-43-4bh"/>
+                            <constraint firstItem="TuN-EJ-yB3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="298" id="nwO-fv-fLM"/>
+                            <constraint firstItem="pP7-yi-YWw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="skO-5y-ljA"/>
+                            <constraint firstItem="pP7-yi-YWw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="126" id="vOr-ba-Nyf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="stateLabel" destination="pP7-yi-YWw" id="PBB-Yw-11b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="124.58770614692655"/>
+        </scene>
+    </scenes>
+</document>
