@@ -16,6 +16,11 @@
 		D056E4FB1EDC6D5D006205BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D056E4F91EDC6D5D006205BE /* LaunchScreen.storyboard */; };
 		D056E5061EDC6D5D006205BE /* ReactiveCocoaTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D056E5051EDC6D5D006205BE /* ReactiveCocoaTestTests.m */; };
 		D056E5111EDC6D5D006205BE /* ReactiveCocoaTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D056E5101EDC6D5D006205BE /* ReactiveCocoaTestUITests.m */; };
+		D05855BC1F3B1A9F000C88D4 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D05855BB1F3B1A9F000C88D4 /* SecondViewController.m */; };
+		D05855C21F3B2448000C88D4 /* JHTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D05855C11F3B2448000C88D4 /* JHTableViewController.m */; };
+		D05855C51F3B283C000C88D4 /* JHThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D05855C41F3B283C000C88D4 /* JHThirdViewController.m */; };
+		D05855C81F3B28A6000C88D4 /* JHCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = D05855C71F3B28A6000C88D4 /* JHCustomView.m */; };
+		D05855CA1F3B28B2000C88D4 /* JHCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D05855C91F3B28B2000C88D4 /* JHCustomView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +59,16 @@
 		D056E50C1EDC6D5D006205BE /* ReactiveCocoaTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactiveCocoaTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D056E5101EDC6D5D006205BE /* ReactiveCocoaTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReactiveCocoaTestUITests.m; sourceTree = "<group>"; };
 		D056E5121EDC6D5D006205BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D05855B11F3AB72D000C88D4 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		D05855BA1F3B1A9F000C88D4 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		D05855BB1F3B1A9F000C88D4 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		D05855C01F3B2448000C88D4 /* JHTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHTableViewController.h; sourceTree = "<group>"; };
+		D05855C11F3B2448000C88D4 /* JHTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHTableViewController.m; sourceTree = "<group>"; };
+		D05855C31F3B283C000C88D4 /* JHThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHThirdViewController.h; sourceTree = "<group>"; };
+		D05855C41F3B283C000C88D4 /* JHThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHThirdViewController.m; sourceTree = "<group>"; };
+		D05855C61F3B28A6000C88D4 /* JHCustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHCustomView.h; sourceTree = "<group>"; };
+		D05855C71F3B28A6000C88D4 /* JHCustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHCustomView.m; sourceTree = "<group>"; };
+		D05855C91F3B28B2000C88D4 /* JHCustomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JHCustomView.xib; sourceTree = "<group>"; };
 		E6ED1B58271B210D7C56BC16 /* Pods_ReactiveCocoaTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactiveCocoaTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -125,14 +140,9 @@
 		D056E4EA1EDC6D5D006205BE /* ReactiveCocoaTest */ = {
 			isa = PBXGroup;
 			children = (
-				D056E4EE1EDC6D5D006205BE /* AppDelegate.h */,
-				D056E4EF1EDC6D5D006205BE /* AppDelegate.m */,
-				D056E4F11EDC6D5D006205BE /* ViewController.h */,
-				D056E4F21EDC6D5D006205BE /* ViewController.m */,
-				D056E4F41EDC6D5D006205BE /* Main.storyboard */,
-				D056E4F71EDC6D5D006205BE /* Assets.xcassets */,
-				D056E4F91EDC6D5D006205BE /* LaunchScreen.storyboard */,
-				D056E4FC1EDC6D5D006205BE /* Info.plist */,
+				D05855BF1F3B23C2000C88D4 /* View */,
+				D05855BE1F3B23A3000C88D4 /* Other */,
+				D05855BD1F3B2384000C88D4 /* Controller */,
 				D056E4EB1EDC6D5D006205BE /* Supporting Files */,
 			);
 			path = ReactiveCocoaTest;
@@ -141,6 +151,9 @@
 		D056E4EB1EDC6D5D006205BE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D056E4F71EDC6D5D006205BE /* Assets.xcassets */,
+				D056E4F91EDC6D5D006205BE /* LaunchScreen.storyboard */,
+				D056E4FC1EDC6D5D006205BE /* Info.plist */,
 				D056E4EC1EDC6D5D006205BE /* main.m */,
 			);
 			name = "Supporting Files";
@@ -162,6 +175,42 @@
 				D056E5121EDC6D5D006205BE /* Info.plist */,
 			);
 			path = ReactiveCocoaTestUITests;
+			sourceTree = "<group>";
+		};
+		D05855BD1F3B2384000C88D4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D056E4F11EDC6D5D006205BE /* ViewController.h */,
+				D056E4F21EDC6D5D006205BE /* ViewController.m */,
+				D05855BA1F3B1A9F000C88D4 /* SecondViewController.h */,
+				D05855BB1F3B1A9F000C88D4 /* SecondViewController.m */,
+				D05855C01F3B2448000C88D4 /* JHTableViewController.h */,
+				D05855C11F3B2448000C88D4 /* JHTableViewController.m */,
+				D05855C31F3B283C000C88D4 /* JHThirdViewController.h */,
+				D05855C41F3B283C000C88D4 /* JHThirdViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		D05855BE1F3B23A3000C88D4 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				D056E4EE1EDC6D5D006205BE /* AppDelegate.h */,
+				D056E4EF1EDC6D5D006205BE /* AppDelegate.m */,
+				D056E4F41EDC6D5D006205BE /* Main.storyboard */,
+				D05855B11F3AB72D000C88D4 /* PrefixHeader.pch */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+		D05855BF1F3B23C2000C88D4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D05855C61F3B28A6000C88D4 /* JHCustomView.h */,
+				D05855C71F3B28A6000C88D4 /* JHCustomView.m */,
+				D05855C91F3B28B2000C88D4 /* JHCustomView.xib */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,12 +278,14 @@
 		D056E4E01EDC6D5D006205BE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = JH;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = justin;
 				TargetAttributes = {
 					D056E4E71EDC6D5D006205BE = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 5UB324DE42;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					D056E5001EDC6D5D006205BE = {
@@ -277,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D056E4FB1EDC6D5D006205BE /* LaunchScreen.storyboard in Resources */,
+				D05855CA1F3B28B2000C88D4 /* JHCustomView.xib in Resources */,
 				D056E4F81EDC6D5D006205BE /* Assets.xcassets in Resources */,
 				D056E4F61EDC6D5D006205BE /* Main.storyboard in Resources */,
 			);
@@ -351,9 +403,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D05855C81F3B28A6000C88D4 /* JHCustomView.m in Sources */,
+				D05855C51F3B283C000C88D4 /* JHThirdViewController.m in Sources */,
+				D05855BC1F3B1A9F000C88D4 /* SecondViewController.m in Sources */,
 				D056E4F31EDC6D5D006205BE /* ViewController.m in Sources */,
 				D056E4F01EDC6D5D006205BE /* AppDelegate.m in Sources */,
 				D056E4ED1EDC6D5D006205BE /* main.m in Sources */,
+				D05855C21F3B2448000C88D4 /* JHTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,10 +560,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5UB324DE42;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ReactiveCocoaTest/PrefixHeader.pch";
 				INFOPLIST_FILE = ReactiveCocoaTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.justin.ReactiveCocoaTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Pods\"/**";
 			};
 			name = Debug;
 		};
@@ -517,10 +576,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5UB324DE42;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ReactiveCocoaTest/PrefixHeader.pch";
 				INFOPLIST_FILE = ReactiveCocoaTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.justin.ReactiveCocoaTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Pods\"/**";
 			};
 			name = Release;
 		};
@@ -593,6 +655,7 @@
 				D056E5171EDC6D5D006205BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D056E5181EDC6D5D006205BE /* Build configuration list for PBXNativeTarget "ReactiveCocoaTestTests" */ = {
 			isa = XCConfigurationList;
@@ -601,6 +664,7 @@
 				D056E51A1EDC6D5D006205BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D056E51B1EDC6D5D006205BE /* Build configuration list for PBXNativeTarget "ReactiveCocoaTestUITests" */ = {
 			isa = XCConfigurationList;
@@ -609,6 +673,7 @@
 				D056E51D1EDC6D5D006205BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
