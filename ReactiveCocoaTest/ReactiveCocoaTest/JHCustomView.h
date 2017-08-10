@@ -21,6 +21,8 @@
 
 @property (weak, nonatomic) id<JHCustomViewDelegate> delegate;
 
+@property (strong, nonatomic) RACSubject *delegateSignal;
+
 - (IBAction)doneButtonClick:(UIButton *)sender;
 
 @end

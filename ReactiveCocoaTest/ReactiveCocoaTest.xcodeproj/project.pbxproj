@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1ED6BC6499AAA899BE3D5051 /* Pods_ReactiveCocoaTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6ED1B58271B210D7C56BC16 /* Pods_ReactiveCocoaTest.framework */; };
+		D04AABE81F3BFD1E00D6D585 /* JHPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = D04AABE71F3BFD1E00D6D585 /* JHPerson.m */; };
+		D04AABEB1F3C02C600D6D585 /* JHStoryboardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D04AABEA1F3C02C600D6D585 /* JHStoryboardManager.m */; };
 		D056E4ED1EDC6D5D006205BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D056E4EC1EDC6D5D006205BE /* main.m */; };
 		D056E4F01EDC6D5D006205BE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D056E4EF1EDC6D5D006205BE /* AppDelegate.m */; };
 		D056E4F31EDC6D5D006205BE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D056E4F21EDC6D5D006205BE /* ViewController.m */; };
@@ -43,6 +45,10 @@
 /* Begin PBXFileReference section */
 		26E330C12E5574190FD1D36B /* Pods-ReactiveCocoaTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveCocoaTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveCocoaTest/Pods-ReactiveCocoaTest.release.xcconfig"; sourceTree = "<group>"; };
 		662091621C09BAFC26F34476 /* Pods-ReactiveCocoaTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveCocoaTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveCocoaTest/Pods-ReactiveCocoaTest.debug.xcconfig"; sourceTree = "<group>"; };
+		D04AABE61F3BFD1E00D6D585 /* JHPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHPerson.h; sourceTree = "<group>"; };
+		D04AABE71F3BFD1E00D6D585 /* JHPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHPerson.m; sourceTree = "<group>"; };
+		D04AABE91F3C02C600D6D585 /* JHStoryboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHStoryboardManager.h; sourceTree = "<group>"; };
+		D04AABEA1F3C02C600D6D585 /* JHStoryboardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHStoryboardManager.m; sourceTree = "<group>"; };
 		D056E4E81EDC6D5D006205BE /* ReactiveCocoaTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveCocoaTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D056E4EC1EDC6D5D006205BE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D056E4EE1EDC6D5D006205BE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -115,6 +121,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D04AABE21F3BFCA500D6D585 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D04AABE61F3BFD1E00D6D585 /* JHPerson.h */,
+				D04AABE71F3BFD1E00D6D585 /* JHPerson.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		D056E4DF1EDC6D5D006205BE = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +155,7 @@
 		D056E4EA1EDC6D5D006205BE /* ReactiveCocoaTest */ = {
 			isa = PBXGroup;
 			children = (
+				D04AABE21F3BFCA500D6D585 /* Model */,
 				D05855BF1F3B23C2000C88D4 /* View */,
 				D05855BE1F3B23A3000C88D4 /* Other */,
 				D05855BD1F3B2384000C88D4 /* Controller */,
@@ -199,6 +215,8 @@
 				D056E4EF1EDC6D5D006205BE /* AppDelegate.m */,
 				D056E4F41EDC6D5D006205BE /* Main.storyboard */,
 				D05855B11F3AB72D000C88D4 /* PrefixHeader.pch */,
+				D04AABE91F3C02C600D6D585 /* JHStoryboardManager.h */,
+				D04AABEA1F3C02C600D6D585 /* JHStoryboardManager.m */,
 			);
 			name = Other;
 			sourceTree = "<group>";
@@ -404,11 +422,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D05855C81F3B28A6000C88D4 /* JHCustomView.m in Sources */,
+				D04AABEB1F3C02C600D6D585 /* JHStoryboardManager.m in Sources */,
 				D05855C51F3B283C000C88D4 /* JHThirdViewController.m in Sources */,
 				D05855BC1F3B1A9F000C88D4 /* SecondViewController.m in Sources */,
 				D056E4F31EDC6D5D006205BE /* ViewController.m in Sources */,
 				D056E4F01EDC6D5D006205BE /* AppDelegate.m in Sources */,
 				D056E4ED1EDC6D5D006205BE /* main.m in Sources */,
+				D04AABE81F3BFD1E00D6D585 /* JHPerson.m in Sources */,
 				D05855C21F3B2448000C88D4 /* JHTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

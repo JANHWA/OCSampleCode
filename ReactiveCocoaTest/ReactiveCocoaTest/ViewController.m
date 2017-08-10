@@ -41,8 +41,11 @@
     [self.passwordTextField.rac_textSignal subscribeNext:^(NSString * _Nullable x) {
         NSLog(@"++++++++++++password:%@",x);
     }];
-    
-    
 }
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [[UIApplication sharedApplication].keyWindow endEditing:YES];
+}
+
 
 @end

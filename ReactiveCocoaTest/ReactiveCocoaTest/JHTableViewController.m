@@ -26,7 +26,7 @@ static NSString *const CellID = @"CellID";
 }
 
 - (void)createData {
-    NSArray *array = @[@"登录",@"调色板",@"通知、回调、KVO"];
+    NSArray *array = @[@"登录",@"调色板",@"通知、代理、观察者模式"];
     
     [self.dataArray addObjectsFromArray:array];
     [self.tableView reloadData];
@@ -38,6 +38,7 @@ static NSString *const CellID = @"CellID";
     }
     return _dataArray;
 }
+
 
 #pragma mark - Table view data source
 
@@ -65,19 +66,19 @@ static NSString *const CellID = @"CellID";
     switch (indexPath.row) {
         case 0:
         {// 登录页
-            ViewController *VC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"ViewControllerID"];
+            ViewController *VC = (ViewController *)[JHStoryboardManager viewController:@"ViewController"];
             [self.navigationController pushViewController:VC animated:YES];
         }
             break;
         case 1:
         {// 调色板
-            SecondViewController *VC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"SecondViewControllerID"];
+            SecondViewController *VC = (SecondViewController *)[JHStoryboardManager viewController:@"SecondViewController"];
             [self.navigationController pushViewController:VC animated:YES];
         }
             break;
         case 2:
         {// 通知、回调、KVO
-            JHThirdViewController *VC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"JHThirdViewControllerID"];
+            JHThirdViewController *VC = (JHThirdViewController *)[JHStoryboardManager viewController:@"JHThirdViewController"];
             [self.navigationController pushViewController:VC animated:YES];
         }
             break;

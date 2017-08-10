@@ -24,21 +24,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UKX-gb-wui">
-                                <rect key="frame" x="84" y="244" width="206" height="30"/>
+                                <rect key="frame" x="84" y="200" width="206" height="30"/>
                                 <color key="tintColor" red="1" green="0.27266363240000002" blue="0.11760869660000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ghy-cw-hDm">
-                                <rect key="frame" x="84" y="289" width="206" height="30"/>
+                                <rect key="frame" x="84" y="245" width="206" height="30"/>
                                 <color key="tintColor" red="1" green="0.27266363240000002" blue="0.11760869660000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oLZ-jJ-wev">
-                                <rect key="frame" x="168" y="362" width="38" height="30"/>
+                                <rect key="frame" x="168" y="318" width="38" height="30"/>
                                 <state key="normal" title="Login"/>
                             </button>
                         </subviews>
@@ -108,8 +108,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j0W-5s-8df" customClass="JHCustomView">
-                                <rect key="frame" x="67.5" y="270" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="68" y="270" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="SVJ-rE-YQi"/>
                                     <constraint firstAttribute="height" constant="128" id="qfF-PD-zQC"/>
@@ -121,12 +121,32 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="huq-67-VUQ">
+                                <rect key="frame" x="137" y="167" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="7mB-SY-gjy"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zEn-pC-qwm">
+                                <rect key="frame" x="157" y="602" width="62" height="30"/>
+                                <state key="normal" title="改变模型"/>
+                                <connections>
+                                    <action selector="jh_kvoButton:" destination="0lM-S3-Q3u" eventType="touchUpInside" id="S6O-Zs-WJW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="huq-67-VUQ" firstAttribute="centerX" secondItem="M5h-OT-GWf" secondAttribute="centerX" id="3BL-wJ-xWo"/>
                             <constraint firstItem="2pp-Dp-PMT" firstAttribute="top" secondItem="uy6-Nj-hIj" secondAttribute="bottom" constant="39" id="FWk-cb-bPe"/>
+                            <constraint firstItem="j0W-5s-8df" firstAttribute="top" secondItem="huq-67-VUQ" secondAttribute="bottom" constant="73" id="OVU-he-ZLc"/>
+                            <constraint firstItem="WQk-zP-bfi" firstAttribute="top" secondItem="zEn-pC-qwm" secondAttribute="bottom" constant="35" id="VDC-ER-eHa"/>
                             <constraint firstItem="2pp-Dp-PMT" firstAttribute="centerX" secondItem="M5h-OT-GWf" secondAttribute="centerX" id="bZZ-rY-zyE"/>
                             <constraint firstItem="2pp-Dp-PMT" firstAttribute="width" secondItem="M5h-OT-GWf" secondAttribute="width" id="cGR-h6-v8q"/>
+                            <constraint firstItem="zEn-pC-qwm" firstAttribute="centerX" secondItem="M5h-OT-GWf" secondAttribute="centerX" id="km1-mP-12w"/>
                             <constraint firstItem="j0W-5s-8df" firstAttribute="top" secondItem="uy6-Nj-hIj" secondAttribute="bottom" constant="250" id="rM6-G5-qP5"/>
                             <constraint firstItem="j0W-5s-8df" firstAttribute="centerX" secondItem="M5h-OT-GWf" secondAttribute="centerX" id="zs3-DH-0Sj"/>
                         </constraints>
@@ -134,11 +154,12 @@
                     <connections>
                         <outlet property="customView" destination="j0W-5s-8df" id="5o1-Oe-4fE"/>
                         <outlet property="stateLabel" destination="2pp-Dp-PMT" id="1Qb-2L-Dmj"/>
+                        <outlet property="textField" destination="huq-67-VUQ" id="YD8-mG-oxh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bgp-c3-Ul9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="726" y="824"/>
+            <point key="canvasLocation" x="725.60000000000002" y="823.53823088455783"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sT7-Xa-FFz">
@@ -169,31 +190,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="VCn-cD-Ku0">
-                                <rect key="frame" x="14" y="130" width="213" height="31"/>
+                                <rect key="frame" x="14" y="86" width="213" height="31"/>
                                 <color key="minimumTrackTintColor" red="1" green="0.27266363240000002" blue="0.11760869660000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="HNe-Ju-5Ds">
-                                <rect key="frame" x="14" y="190" width="213" height="31"/>
+                                <rect key="frame" x="14" y="146" width="213" height="31"/>
                                 <color key="minimumTrackTintColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="mDF-c5-po5">
-                                <rect key="frame" x="14" y="250" width="213" height="31"/>
+                                <rect key="frame" x="14" y="206" width="213" height="31"/>
                                 <color key="minimumTrackTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </slider>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0.5" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4vD-no-MGV">
-                                <rect key="frame" x="283" y="130" width="46" height="30"/>
+                                <rect key="frame" x="283" y="86" width="46" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0.5" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NVb-cG-rFb">
-                                <rect key="frame" x="283" y="190" width="46" height="30"/>
+                                <rect key="frame" x="283" y="146" width="46" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0.5" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eGy-fr-vri">
-                                <rect key="frame" x="283" y="250" width="46" height="30"/>
+                                <rect key="frame" x="283" y="206" width="46" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>

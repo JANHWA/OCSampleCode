@@ -28,8 +28,12 @@
 
 - (IBAction)doneButtonClick:(UIButton *)sender {
     
-    if ([self.delegate respondsToSelector:@selector(didSelectedDoneButton:)]) {
-        [self.delegate didSelectedDoneButton:sender];
+//    if ([self.delegate respondsToSelector:@selector(didSelectedDoneButton:)]) {
+//        [self.delegate didSelectedDoneButton:sender];
+//    }
+    
+    if (self.delegateSignal) {
+        [self.delegateSignal sendNext:sender];
     }
     
 }
