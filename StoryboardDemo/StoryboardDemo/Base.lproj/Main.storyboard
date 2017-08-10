@@ -29,7 +29,7 @@
                                 </constraints>
                                 <state key="normal" title="Second VC"/>
                                 <connections>
-                                    <segue destination="F5r-sh-hHV" kind="show" id="Mwx-wW-ilR"/>
+                                    <segue destination="F5r-sh-hHV" kind="push" id="Mwx-wW-ilR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibc-P9-n9R">
@@ -78,10 +78,12 @@
         <!--JHSecondViewControllerID-->
         <scene sceneID="JJz-aV-CEy">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="JHSecondViewControllerID" storyboardName="Home" referencedIdentifier="JHSecondViewControllerID" id="F5r-sh-hHV" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="JHSecondViewControllerID" storyboardName="Home" referencedIdentifier="JHSecondViewControllerID" id="F5r-sh-hHV" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="G0I-fr-Ic5"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z9a-kp-yQp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1817" y="-236"/>
+            <point key="canvasLocation" x="1737" y="-177"/>
         </scene>
         <!--Me-->
         <scene sceneID="FjI-cL-RDq">
