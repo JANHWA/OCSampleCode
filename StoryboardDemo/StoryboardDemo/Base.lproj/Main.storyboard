@@ -29,7 +29,7 @@
                                 </constraints>
                                 <state key="normal" title="Second VC"/>
                                 <connections>
-                                    <segue destination="F5r-sh-hHV" kind="push" id="Mwx-wW-ilR"/>
+                                    <segue destination="F5r-sh-hHV" kind="push" identifier="SecondVC" id="Mwx-wW-ilR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibc-P9-n9R">
@@ -37,7 +37,6 @@
                                 <state key="normal" title="Third VC"/>
                                 <connections>
                                     <action selector="jh_ThirdVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pez-bv-z9R"/>
-                                    <segue destination="SRk-1H-Yug" kind="modal" identifier="Third" id="TYB-8N-wGW"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -52,6 +51,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="TL3-Wd-brh"/>
+                    <connections>
+                        <segue destination="SRk-1H-Yug" kind="show" identifier="ThirdVC" id="Zsb-dH-HIf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -83,7 +85,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z9a-kp-yQp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1737" y="-177"/>
+            <point key="canvasLocation" x="1697" y="-136"/>
         </scene>
         <!--Me-->
         <scene sceneID="FjI-cL-RDq">
@@ -93,7 +95,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fkX-ru-NlB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1737" y="225"/>
+            <point key="canvasLocation" x="1697" y="175"/>
         </scene>
     </scenes>
 </document>
