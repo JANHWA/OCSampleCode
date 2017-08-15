@@ -20,8 +20,16 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:nil applicationActivities:nil];
+
+}
+- (IBAction)shareButtonEvent:(UIButton *)sender {
     
+    NSString *urlStr = @"www.baidu.com";
+    NSURL *url = [NSURL URLWithString:urlStr];
+    NSString *title = @"VIVA";
+//    UIImage *image = [UIImage imageNamed:@"lufei"];
+    UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:@[url,title] applicationActivities:nil];
+    activityViewController.excludedActivityTypes = @[UIActivityTypeAirDrop];
     [self presentViewController:activityViewController animated:YES completion:nil];
 }
 
