@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Orn-PB-dQo">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Setting-->
+        <scene sceneID="cnU-94-ca3">
+            <objects>
+                <viewController id="lix-mg-8hM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TjH-iM-051"/>
+                        <viewControllerLayoutGuide type="bottom" id="N8m-wn-1Tx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="f15-Nk-86M">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Setting" id="dnU-R6-Rig">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="peW-xN-UJZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="254" y="456"/>
+        </scene>
+        <!--Edit-->
+        <scene sceneID="kQI-Ui-hXn">
+            <objects>
+                <viewController id="uyH-CF-Adb" customClass="JHEditViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0q4-tY-Iny"/>
+                        <viewControllerLayoutGuide type="bottom" id="DY2-aK-1Pe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fiJ-1S-sJw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HWt-aU-BZR">
+                                <rect key="frame" x="0.0" y="322.5" width="375" height="22"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="Sea-x3-se8"/>
+                                    <constraint firstAttribute="height" constant="22" id="yRz-7X-PHt"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0pE-ln-dEJ">
+                                <rect key="frame" x="165" y="404.5" width="44" height="30"/>
+                                <state key="normal" title="Action"/>
+                                <connections>
+                                    <action selector="actionEvent:" destination="uyH-CF-Adb" eventType="touchUpInside" id="kct-tM-cW8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0pE-ln-dEJ" firstAttribute="centerX" secondItem="fiJ-1S-sJw" secondAttribute="centerX" id="Btc-XP-ELg"/>
+                            <constraint firstItem="0pE-ln-dEJ" firstAttribute="top" secondItem="HWt-aU-BZR" secondAttribute="bottom" constant="60" id="QF2-ce-uIW"/>
+                            <constraint firstItem="HWt-aU-BZR" firstAttribute="centerY" secondItem="fiJ-1S-sJw" secondAttribute="centerY" id="ZSr-zf-wBs"/>
+                            <constraint firstAttribute="trailing" secondItem="HWt-aU-BZR" secondAttribute="trailing" id="jFY-R9-sSL"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Edit" id="cHI-MB-CJn">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="progressView" destination="HWt-aU-BZR" id="CkG-J8-Xb5"/>
+                        <outlet property="progressViewWidth" destination="Sea-x3-se8" id="cbd-Jm-HgT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WA6-D6-0G0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="253.59999999999999" y="-217.24137931034485"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="JZc-p5-y7A">
+            <objects>
+                <tabBarController id="Orn-PB-dQo" sceneMemberID="viewController">
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <tabBar key="tabBar" contentMode="scaleAspectFill" itemPositioning="centered" itemSpacing="150" id="z7O-pi-LXJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="uyH-CF-Adb" kind="relationship" relationship="viewControllers" id="wPy-Xq-32H"/>
+                        <segue destination="lix-mg-8hM" kind="relationship" relationship="viewControllers" id="S0S-uT-60C"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OLe-jc-hBC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-697" y="105"/>
+        </scene>
+    </scenes>
+</document>
