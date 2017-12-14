@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "HUD.h"
+#import "Networking.h"
 
 @interface ViewController ()
 
@@ -28,6 +29,8 @@
     });
 }
 - (IBAction)dismiss:(UIButton *)sender {
+    
+    [[Networking shareManager] request];
 }
 
 

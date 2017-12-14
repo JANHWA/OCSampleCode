@@ -16,6 +16,8 @@
 		D0B90CDA1FD4DE0C0012F836 /* HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B90CD91FD4DE0C0012F836 /* HUD.m */; };
 		D0B90CE21FD4F4150012F836 /* ToolUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B90CE11FD4F4150012F836 /* ToolUITests.m */; };
 		D0B90CF61FD4F9F60012F836 /* ToolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B90CF51FD4F9F60012F836 /* ToolTests.m */; };
+		D0B90D001FD51B400012F836 /* Networking.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B90CFF1FD51B400012F836 /* Networking.m */; };
+		D0B90D071FD5257D0012F836 /* APITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B90D061FD5257D0012F836 /* APITests.m */; };
 		E855AC8747017D883DF55D23 /* libPods-Tool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FA7DFB1F16A527C9FE1AEF0 /* libPods-Tool.a */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +60,9 @@
 		D0B90CF31FD4F9F60012F836 /* ToolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0B90CF51FD4F9F60012F836 /* ToolTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToolTests.m; sourceTree = "<group>"; };
 		D0B90CF71FD4F9F60012F836 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0B90CFE1FD51B400012F836 /* Networking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
+		D0B90CFF1FD51B400012F836 /* Networking.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Networking.m; sourceTree = "<group>"; };
+		D0B90D061FD5257D0012F836 /* APITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APITests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +133,7 @@
 		D0B90CC11FD4DCC30012F836 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				D0B90CFD1FD51B010012F836 /* Networking */,
 				D0B90CE91FD4F7CD0012F836 /* HUD */,
 				D0B90CC21FD4DCC30012F836 /* AppDelegate.h */,
 				D0B90CC31FD4DCC30012F836 /* AppDelegate.m */,
@@ -163,10 +169,20 @@
 		D0B90CF41FD4F9F60012F836 /* ToolTests */ = {
 			isa = PBXGroup;
 			children = (
+				D0B90D061FD5257D0012F836 /* APITests.m */,
 				D0B90CF51FD4F9F60012F836 /* ToolTests.m */,
 				D0B90CF71FD4F9F60012F836 /* Info.plist */,
 			);
 			path = ToolTests;
+			sourceTree = "<group>";
+		};
+		D0B90CFD1FD51B010012F836 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				D0B90CFE1FD51B400012F836 /* Networking.h */,
+				D0B90CFF1FD51B400012F836 /* Networking.m */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -360,6 +376,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0B90CC71FD4DCC30012F836 /* ViewController.m in Sources */,
+				D0B90D001FD51B400012F836 /* Networking.m in Sources */,
 				D0B90CDA1FD4DE0C0012F836 /* HUD.m in Sources */,
 				D0B90CD21FD4DCC30012F836 /* main.m in Sources */,
 				D0B90CC41FD4DCC30012F836 /* AppDelegate.m in Sources */,
@@ -378,6 +395,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0B90D071FD5257D0012F836 /* APITests.m in Sources */,
 				D0B90CF61FD4F9F60012F836 /* ToolTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -599,6 +617,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5UB324DE42;
+				HEADER_SEARCH_PATHS = (
+					"\"${PODS_ROOT}/Headers/Public/SVProgressHUD\"/**",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"/**",
+					"\"$(SRCROOT)/Pods\"/**",
+				);
 				INFOPLIST_FILE = ToolTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Justin.ToolTests;
@@ -614,6 +637,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5UB324DE42;
+				HEADER_SEARCH_PATHS = (
+					"\"${PODS_ROOT}/Headers/Public/SVProgressHUD\"/**",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"/**",
+					"\"$(SRCROOT)/Pods\"/**",
+				);
 				INFOPLIST_FILE = ToolTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Justin.ToolTests;

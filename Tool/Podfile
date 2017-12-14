@@ -6,6 +6,9 @@ target 'Tool' do
   # use_frameworks!
 
 pod 'SVProgressHUD'
+
+pod 'AFNetworking'
+
   # Pods for Tool
 
 end
