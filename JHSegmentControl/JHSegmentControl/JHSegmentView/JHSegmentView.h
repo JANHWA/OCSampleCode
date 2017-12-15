@@ -10,10 +10,23 @@
 
 @class JHSegmentView;
 
+@protocol JHSegmentViewDataSource<NSObject>
+
+
+@required
+/**
+ 数据源代理
+
+ @param segmentView segmentView视图
+ @return 数据源（仅支持文字信息)
+ */
+- (NSArray <NSString *>*)titlesOfSegmentView:(JHSegmentView *)segmentView;
+
+@end
+
 @protocol JHSegmentViewDelegate<NSObject>
 
 @optional
-
 
 /**
  点击代理回调
@@ -38,13 +51,34 @@ typedef NS_ENUM(NSUInteger, JHSegmentViewType) {
     JHSegmentViewShowMessage, // 带消息红点
 };
 
+
+//MARK: - Interface
+
+IB_DESIGNABLE
 @interface JHSegmentView : UIView
+
+
+/**
+ 数据源代理
+ */
+@property (weak, nonatomic) id<JHSegmentViewDataSource> dataSource;
+
+/**
+ 代理
+ */
+@property (weak, nonatomic) id<JHSegmentViewDelegate> delegate;
 
 
 /**
  显示类型
  */
 @property (assign, nonatomic) JHSegmentViewType showType;
+
+
+/**
+ 是否带圆角
+ */
+@property (assign, nonatomic) IBInspectable BOOL round;
 
 /**
  滑动视图
