@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C528113E20FF14FC00F57F70 /* JHSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C528113D20FF14FC00F57F70 /* JHSearchViewController.m */; };
+		C528114220FF1AF400F57F70 /* JHSuggestTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C528114020FF1AF400F57F70 /* JHSuggestTableViewCell.m */; };
+		C528114320FF1AF400F57F70 /* JHSuggestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C528114120FF1AF400F57F70 /* JHSuggestTableViewCell.xib */; };
+		C528114B20FF1C6D00F57F70 /* JHTagCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C528114620FF1C6D00F57F70 /* JHTagCollectionViewCell.m */; };
+		C528114C20FF1C6D00F57F70 /* JHTagView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C528114720FF1C6D00F57F70 /* JHTagView.xib */; };
+		C528114D20FF1C6D00F57F70 /* JHTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = C528114820FF1C6D00F57F70 /* JHTagView.m */; };
+		C528114E20FF1C6D00F57F70 /* JHTagCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C528114920FF1C6D00F57F70 /* JHTagCollectionViewCell.xib */; };
+		C528115120FF2A1D00F57F70 /* JHTableViewSctionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C528115020FF2A1D00F57F70 /* JHTableViewSctionView.m */; };
+		C528115320FF2A2800F57F70 /* JHTableViewSctionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C528115220FF2A2800F57F70 /* JHTableViewSctionView.xib */; };
+		C528115620FF401300F57F70 /* JHCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C528115520FF401300F57F70 /* JHCollectionViewFlowLayout.m */; };
+		C528115A2100631E00F57F70 /* JHSearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C52811582100631E00F57F70 /* JHSearchResultViewController.m */; };
+		C528115B2100631E00F57F70 /* JHSearchResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C52811592100631E00F57F70 /* JHSearchResultViewController.xib */; };
+		C5530AAC210182FF00905729 /* JHSearchSuggestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5530AAA210182FF00905729 /* JHSearchSuggestViewController.m */; };
+		C5530AAD210182FF00905729 /* JHSearchSuggestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5530AAB210182FF00905729 /* JHSearchSuggestViewController.xib */; };
 		C5E43F7D20FEEF3300AE7F37 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E43F7C20FEEF3300AE7F37 /* AppDelegate.m */; };
 		C5E43F8020FEEF3300AE7F37 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E43F7F20FEEF3300AE7F37 /* ViewController.m */; };
 		C5E43F8320FEEF3300AE7F37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5E43F8120FEEF3300AE7F37 /* Main.storyboard */; };
@@ -16,6 +30,31 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C528113C20FF14FC00F57F70 /* JHSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JHSearchViewController.h; sourceTree = "<group>"; };
+		C528113D20FF14FC00F57F70 /* JHSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JHSearchViewController.m; sourceTree = "<group>"; };
+		C528113F20FF1AF400F57F70 /* JHSuggestTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JHSuggestTableViewCell.h; sourceTree = "<group>"; };
+		C528114020FF1AF400F57F70 /* JHSuggestTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JHSuggestTableViewCell.m; sourceTree = "<group>"; };
+		C528114120FF1AF400F57F70 /* JHSuggestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JHSuggestTableViewCell.xib; sourceTree = "<group>"; };
+		C528114520FF1C6D00F57F70 /* JHTagView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHTagView.h; sourceTree = "<group>"; };
+		C528114620FF1C6D00F57F70 /* JHTagCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHTagCollectionViewCell.m; sourceTree = "<group>"; };
+		C528114720FF1C6D00F57F70 /* JHTagView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JHTagView.xib; sourceTree = "<group>"; };
+		C528114820FF1C6D00F57F70 /* JHTagView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHTagView.m; sourceTree = "<group>"; };
+		C528114920FF1C6D00F57F70 /* JHTagCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JHTagCollectionViewCell.xib; sourceTree = "<group>"; };
+		C528114A20FF1C6D00F57F70 /* JHTagCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHTagCollectionViewCell.h; sourceTree = "<group>"; };
+		C528114F20FF2A1D00F57F70 /* JHTableViewSctionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JHTableViewSctionView.h; sourceTree = "<group>"; };
+		C528115020FF2A1D00F57F70 /* JHTableViewSctionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JHTableViewSctionView.m; sourceTree = "<group>"; };
+		C528115220FF2A2800F57F70 /* JHTableViewSctionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JHTableViewSctionView.xib; sourceTree = "<group>"; };
+		C528115420FF401300F57F70 /* JHCollectionViewFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JHCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		C528115520FF401300F57F70 /* JHCollectionViewFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JHCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		C52811572100631E00F57F70 /* JHSearchResultViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JHSearchResultViewController.h; sourceTree = "<group>"; };
+		C52811582100631E00F57F70 /* JHSearchResultViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JHSearchResultViewController.m; sourceTree = "<group>"; };
+		C52811592100631E00F57F70 /* JHSearchResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JHSearchResultViewController.xib; sourceTree = "<group>"; };
+		C5530AA9210182FF00905729 /* JHSearchSuggestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JHSearchSuggestViewController.h; sourceTree = "<group>"; };
+		C5530AAA210182FF00905729 /* JHSearchSuggestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JHSearchSuggestViewController.m; sourceTree = "<group>"; };
+		C5530AAB210182FF00905729 /* JHSearchSuggestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JHSearchSuggestViewController.xib; sourceTree = "<group>"; };
+		C5530AAE2101836300905729 /* JHSearch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JHSearch.h; sourceTree = "<group>"; };
+		C5530AAF2101838300905729 /* JHSearchHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JHSearchHeader.pch; sourceTree = "<group>"; };
+		C5530AB12101855400905729 /* JHSearchMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JHSearchMacro.h; sourceTree = "<group>"; };
 		C5E43F7820FEEF3300AE7F37 /* JHSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JHSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5E43F7B20FEEF3300AE7F37 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C5E43F7C20FEEF3300AE7F37 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -39,6 +78,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C528114420FF1C6D00F57F70 /* TagView */ = {
+			isa = PBXGroup;
+			children = (
+				C528114A20FF1C6D00F57F70 /* JHTagCollectionViewCell.h */,
+				C528114620FF1C6D00F57F70 /* JHTagCollectionViewCell.m */,
+				C528114920FF1C6D00F57F70 /* JHTagCollectionViewCell.xib */,
+				C528114520FF1C6D00F57F70 /* JHTagView.h */,
+				C528114820FF1C6D00F57F70 /* JHTagView.m */,
+				C528114720FF1C6D00F57F70 /* JHTagView.xib */,
+				C528115420FF401300F57F70 /* JHCollectionViewFlowLayout.h */,
+				C528115520FF401300F57F70 /* JHCollectionViewFlowLayout.m */,
+			);
+			path = TagView;
+			sourceTree = "<group>";
+		};
+		C5530AB0210184E000905729 /* JHSearch */ = {
+			isa = PBXGroup;
+			children = (
+				C528114420FF1C6D00F57F70 /* TagView */,
+				C528113C20FF14FC00F57F70 /* JHSearchViewController.h */,
+				C528113D20FF14FC00F57F70 /* JHSearchViewController.m */,
+				C528113F20FF1AF400F57F70 /* JHSuggestTableViewCell.h */,
+				C528114020FF1AF400F57F70 /* JHSuggestTableViewCell.m */,
+				C528114120FF1AF400F57F70 /* JHSuggestTableViewCell.xib */,
+				C528114F20FF2A1D00F57F70 /* JHTableViewSctionView.h */,
+				C528115020FF2A1D00F57F70 /* JHTableViewSctionView.m */,
+				C528115220FF2A2800F57F70 /* JHTableViewSctionView.xib */,
+				C52811572100631E00F57F70 /* JHSearchResultViewController.h */,
+				C52811582100631E00F57F70 /* JHSearchResultViewController.m */,
+				C52811592100631E00F57F70 /* JHSearchResultViewController.xib */,
+				C5530AA9210182FF00905729 /* JHSearchSuggestViewController.h */,
+				C5530AAA210182FF00905729 /* JHSearchSuggestViewController.m */,
+				C5530AAB210182FF00905729 /* JHSearchSuggestViewController.xib */,
+				C5530AAE2101836300905729 /* JHSearch.h */,
+				C5530AAF2101838300905729 /* JHSearchHeader.pch */,
+				C5530AB12101855400905729 /* JHSearchMacro.h */,
+			);
+			path = JHSearch;
+			sourceTree = "<group>";
+		};
 		C5E43F6F20FEEF3300AE7F37 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +137,7 @@
 		C5E43F7A20FEEF3300AE7F37 /* JHSearch */ = {
 			isa = PBXGroup;
 			children = (
+				C5530AB0210184E000905729 /* JHSearch */,
 				C5E43F7B20FEEF3300AE7F37 /* AppDelegate.h */,
 				C5E43F7C20FEEF3300AE7F37 /* AppDelegate.m */,
 				C5E43F7E20FEEF3300AE7F37 /* ViewController.h */,
@@ -97,6 +177,7 @@
 		C5E43F7020FEEF3300AE7F37 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = JH;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = HWA;
 				TargetAttributes = {
@@ -130,7 +211,13 @@
 			files = (
 				C5E43F8820FEEF3400AE7F37 /* LaunchScreen.storyboard in Resources */,
 				C5E43F8520FEEF3400AE7F37 /* Assets.xcassets in Resources */,
+				C528114320FF1AF400F57F70 /* JHSuggestTableViewCell.xib in Resources */,
+				C528115320FF2A2800F57F70 /* JHTableViewSctionView.xib in Resources */,
+				C528114E20FF1C6D00F57F70 /* JHTagCollectionViewCell.xib in Resources */,
 				C5E43F8320FEEF3300AE7F37 /* Main.storyboard in Resources */,
+				C528115B2100631E00F57F70 /* JHSearchResultViewController.xib in Resources */,
+				C528114C20FF1C6D00F57F70 /* JHTagView.xib in Resources */,
+				C5530AAD210182FF00905729 /* JHSearchSuggestViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,8 +229,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5E43F8020FEEF3300AE7F37 /* ViewController.m in Sources */,
+				C528114D20FF1C6D00F57F70 /* JHTagView.m in Sources */,
+				C528115120FF2A1D00F57F70 /* JHTableViewSctionView.m in Sources */,
 				C5E43F8B20FEEF3400AE7F37 /* main.m in Sources */,
+				C528115620FF401300F57F70 /* JHCollectionViewFlowLayout.m in Sources */,
+				C5530AAC210182FF00905729 /* JHSearchSuggestViewController.m in Sources */,
+				C528115A2100631E00F57F70 /* JHSearchResultViewController.m in Sources */,
+				C528114220FF1AF400F57F70 /* JHSuggestTableViewCell.m in Sources */,
+				C528113E20FF14FC00F57F70 /* JHSearchViewController.m in Sources */,
 				C5E43F7D20FEEF3300AE7F37 /* AppDelegate.m in Sources */,
+				C528114B20FF1C6D00F57F70 /* JHTagCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +380,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5UB324DE42;
+				GCC_PREFIX_HEADER = "${SRCROOT}/JHSearch/JHSearch/JHSearchHeader.pch";
 				INFOPLIST_FILE = JHSearch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -302,6 +398,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5UB324DE42;
+				GCC_PREFIX_HEADER = "${SRCROOT}/JHSearch/JHSearch/JHSearchHeader.pch";
 				INFOPLIST_FILE = JHSearch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
