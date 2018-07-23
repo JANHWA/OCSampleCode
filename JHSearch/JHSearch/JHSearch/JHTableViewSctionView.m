@@ -10,6 +10,8 @@
 
 @interface JHTableViewSctionView ()
 @property (strong, nonatomic) IBOutlet UIView *view;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UIButton *rightButton;
 
 @end
 
@@ -39,7 +41,22 @@
     [self addSubview:self.view];
 }
 
+- (IBAction)clickButton:(UIButton *)sender {
+    if ([self.delegate respondsToSelector:@selector(sectionView:didSelectButton:section:)]) {
+        [self.delegate sectionView:self didSelectButton:sender section:self.section];
+    }
+}
 
+- (void)showSectionContentWithSection:(NSInteger)section {
+    
+    self.section = section;
+    if (section == 0) {
+        self.rightButton.hidden = YES;
+        self.titleLabel.text = @"热门搜索";
+    } else {
+        self.titleLabel.text = @"搜索历史";
+    }
+}
 
 
 

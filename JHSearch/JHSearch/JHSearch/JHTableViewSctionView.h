@@ -7,7 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
+@class JHTableViewSctionView;
+
+
+@protocol JHTableViewSctionViewDelegate<NSObject>
+
+@optional
+- (void)sectionView:(JHTableViewSctionView *)sectionView didSelectButton:(UIButton *)sender section:(NSInteger)section;
+
+
+@end
 
 @interface JHTableViewSctionView : UIView
+
+@property (assign, nonatomic) NSInteger section;
+
+@property (weak, nonatomic) id<JHTableViewSctionViewDelegate> delegate;
+
+- (void)showSectionContentWithSection:(NSInteger)section;
 
 @end

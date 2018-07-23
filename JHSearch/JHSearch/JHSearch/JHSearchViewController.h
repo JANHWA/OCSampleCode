@@ -15,6 +15,13 @@
 
 @property (strong, nonatomic) JHSearchResultViewController *searchResultController;
 
+@property (strong, nonatomic) UISearchBar *searchBar;
 
+@property (copy, nonatomic) NSString *searchBarPlaceholder;
+
+/**
+ 热门搜索数组
+ */
+@property (strong, nonatomic) NSArray<NSString *> *hotSearchs;
 
 @end

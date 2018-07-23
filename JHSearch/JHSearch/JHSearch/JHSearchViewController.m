@@ -12,12 +12,13 @@
 
 @interface JHSearchViewController ()
 
-<UISearchBarDelegate,
-JHSearchSuggestViewControllerDelegate>
-
-@property (strong, nonatomic) UISearchBar *searchBar;
+<
+UISearchBarDelegate,
+JHSearchSuggestViewControllerDelegate
+>
 
 @property (strong, nonatomic) JHSearchSuggestViewController *searchSuggestController;
+
 
 @end
 
@@ -26,7 +27,6 @@ JHSearchSuggestViewControllerDelegate>
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
     
     self.navigationItem.titleView = self.searchBar;
     
@@ -35,11 +35,21 @@ JHSearchSuggestViewControllerDelegate>
     
     [self.view addSubview:self.searchSuggestController.view];
     [self addChildViewController:self.searchSuggestController];
+    
+    self.searchBar.placeholder = self.searchBarPlaceholder;
+}
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        
+    }
+    return self;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-
     [self.searchBar becomeFirstResponder];
 }
 
@@ -75,12 +85,6 @@ JHSearchSuggestViewControllerDelegate>
 
     if (searchText.length == 0) {
         [self.view bringSubviewToFront:self.searchSuggestController.view];
-    } else if (searchText.length > 0) {
-//        if (self.searchResultController) {
-//            [self.view bringSubviewToFront:self.searchResultController.view];
-//        }
-    } else {
-
     }
 }
 
@@ -98,19 +102,6 @@ JHSearchSuggestViewControllerDelegate>
         }
     }
     [self.searchBar resignFirstResponder];
-    
-    NSArray *historyArray = [NSKeyedUnarchiver unarchiveObjectWithFile:PATH_SEARCH_HISTORY];
-    
-    NSMutableArray *arrayM = [NSMutableArray arrayWithArray:historyArray];
-    
-    [arrayM insertObject:tagSearchText atIndex:0];
-    
-    NSMutableOrderedSet *mutableOrderedSet = [NSMutableOrderedSet orderedSetWithArray:arrayM];
-    
-    
-    [NSKeyedArchiver archiveRootObject:[mutableOrderedSet array] toFile:PATH_SEARCH_HISTORY];
-    
-    NSLog(@"search_history_path:%@ \n allObj:%@",PATH_SEARCH_HISTORY,[mutableOrderedSet array]);
 }
 
 
@@ -131,6 +122,7 @@ JHSearchSuggestViewControllerDelegate>
     if (_searchSuggestController == nil) {
         _searchSuggestController = [[JHSearchSuggestViewController alloc] init];
         _searchSuggestController.delegate = self;
+        _searchSuggestController.hotSearchs = self.hotSearchs;
         [_searchSuggestController setScrollViewDidScrollHandler:^(UIScrollView *scrollView) {
             [weakSelf.searchBar resignFirstResponder];
         }];

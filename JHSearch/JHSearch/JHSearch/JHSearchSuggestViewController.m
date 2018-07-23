@@ -14,7 +14,8 @@
 <UISearchBarDelegate,
 UITableViewDataSource,
 UITableViewDelegate,
-JHSuggestTableViewCellDelegate>
+JHSuggestTableViewCellDelegate,
+JHTableViewSctionViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSMutableArray     *dataArray;
@@ -30,14 +31,14 @@ static NSString *const cellID = @"JHSuggestTableViewCellID";
     
     
     [self.tableView registerNib:[UINib nibWithNibName:@"JHSuggestTableViewCell" bundle:nil] forCellReuseIdentifier:cellID];
-    
-    NSArray *tags1 = @[@"BMW",@"法拉利",@"兰博基尼",@"Hondasssssssssssss",@"BMW",@"法拉利",@"兰博基尼",@"兰博基尼",@"Hondaddddddddddddddd",@"BMW",@"法拉利",@"兰博基尼",@"兰博基尼"];
-    NSArray *tags2 = @[@"BMW",@"法拉利",@"兰博基尼"];
-    
     [self.tableView setTableFooterView:[[UIView alloc] init]];
     
-    [self.dataArray addObject:tags1];
-    [self.dataArray addObject:tags2];
+    NSArray *historyArray = [NSKeyedUnarchiver unarchiveObjectWithFile:PATH_SEARCH_HISTORY];
+    
+    [self.dataArray addObject:self.hotSearchs];
+    if ([historyArray count] > 0) {
+        [self.dataArray addObject:historyArray];
+    }
     [self.tableView reloadData];
 }
 
@@ -45,13 +46,10 @@ static NSString *const cellID = @"JHSuggestTableViewCellID";
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
-    //    [self.searchBar becomeFirstResponder];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    //    [self.searchBar resignFirstResponder];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
@@ -83,6 +81,8 @@ static NSString *const cellID = @"JHSuggestTableViewCellID";
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     
     JHTableViewSctionView *sectionView = [[JHTableViewSctionView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 44.0)];
+    [sectionView showSectionContentWithSection:section];
+    sectionView.delegate = self;
     return sectionView;
 }
 
@@ -94,11 +94,54 @@ static NSString *const cellID = @"JHSuggestTableViewCellID";
     return 44.0;
 }
 
+//MARK: - JHTableViewSctionViewDelegate
+
+- (void)sectionView:(JHTableViewSctionView *)sectionView didSelectButton:(UIButton *)sender section:(NSInteger)section {
+    
+    NSArray *historyArray = [NSKeyedUnarchiver unarchiveObjectWithFile:PATH_SEARCH_HISTORY];
+    NSMutableOrderedSet *mutableOrderedSet;
+    if ([historyArray count] > 0) {
+        mutableOrderedSet = [NSMutableOrderedSet orderedSetWithArray:historyArray];
+    }
+    if ([mutableOrderedSet count] > 0) {
+        [mutableOrderedSet removeAllObjects];
+    }
+    
+    [NSKeyedArchiver archiveRootObject:mutableOrderedSet toFile:PATH_SEARCH_HISTORY];
+    
+    if ([self.dataArray count] > 1) {
+        [self.dataArray removeObjectAtIndex:1];
+        [self.tableView reloadData];
+    }
+    
+}
 
 //MARK: - JHSuggestTableViewCellDelegate
 
 - (void)suggestTableViewCell:(JHSuggestTableViewCell *)cell didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     NSString *searchText = self.dataArray[indexPath.section][indexPath.row];
+    
+    NSMutableArray *arrayM = [[NSMutableArray alloc] init];
+    if ([self.dataArray count] > 1) {
+        NSArray *historyArray = [NSKeyedUnarchiver unarchiveObjectWithFile:PATH_SEARCH_HISTORY];
+    
+        [arrayM addObjectsFromArray:historyArray];
+        [arrayM insertObject:searchText atIndex:0];
+    } else {
+        [arrayM insertObject:searchText atIndex:0];
+    }
+    
+    NSMutableOrderedSet *mutableOrderedSet = [NSMutableOrderedSet orderedSetWithArray:arrayM];
+    
+    [NSKeyedArchiver archiveRootObject:[mutableOrderedSet array] toFile:PATH_SEARCH_HISTORY];
+    
+    if ([self.dataArray count] > 1) {
+        [self.dataArray removeObjectAtIndex:1];
+    }
+    
+    [self.dataArray addObject:[mutableOrderedSet array]];
+    [self.tableView reloadData];
+    
     if ([self.delegate respondsToSelector:@selector(searchSuggestViewController:suggestTableViewCell:searchText:)]) {
         [self.delegate searchSuggestViewController:self suggestTableViewCell:cell searchText:searchText];
     }

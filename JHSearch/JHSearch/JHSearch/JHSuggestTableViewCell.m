@@ -44,7 +44,10 @@ JHTagViewDelegate
 
 - (void)tagView:(JHTagView *)tagView collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     if ([self.delegate respondsToSelector:@selector(suggestTableViewCell:didSelectItemAtIndexPath:)]) {
-        [self.delegate suggestTableViewCell:self didSelectItemAtIndexPath:indexPath];
+        
+        NSIndexPath *indexP = [NSIndexPath indexPathForRow:indexPath.row inSection:self.indexPath.section];
+        
+        [self.delegate suggestTableViewCell:self didSelectItemAtIndexPath:indexP];
     }
 }
 

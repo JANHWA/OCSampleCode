@@ -23,6 +23,8 @@ typedef void(^ScrollViewDidScrollHandler)(UIScrollView *scrollView);
 
 @interface JHSearchSuggestViewController : UIViewController
 
+@property (strong, nonatomic) NSArray<NSString *> *hotSearchs;
+
 @property (copy, nonatomic) ScrollViewDidScrollHandler scrollViewDidScrollHandler;
 
 @property (weak, nonatomic) id<JHSearchSuggestViewControllerDelegate> delegate;
