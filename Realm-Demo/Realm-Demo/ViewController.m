@@ -32,35 +32,37 @@
     [super viewDidLoad];
 }
 
-static int i = 0;
 
 - (IBAction)createButton:(UIButton *)sender {
     
-    RLMRealm *realm = [RLMRealm defaultRealm];
+    RLMRealmConfiguration *config = [RLMRealmConfiguration defaultConfiguration];
     
-    Person *p1 = [[Person alloc] init];
-    p1.name = [NSString stringWithFormat:@"Jack-----%d",i++];
-    p1.age = 15 + i;
+    RLMRealm *realm = [RLMRealm realmWithConfiguration:config error:nil];
+    
     [realm transactionWithBlock:^{
-        [realm addObject:p1];
+        for (int i = 0; i < 10; i++) {
+            Person *p = [[Person alloc] init];
+            p.name = [NSString stringWithFormat:@"Jack_%d",i];;
+            p.age = 19 + i;
+            p.ID  = 1000+i;
+            p.height = 175 + i;
+            p.weight = 100 + i;
+            
+            [self.arrayM addObject:p];
+        }
+        
+        if (realm.isEmpty) {
+            [realm addObjects:self.arrayM];
+            
+        } else {
+            [realm addOrUpdateObjects:self.arrayM];
+        }
     }];
-    [self.arrayM addObject:p1];
+
+    NSString *path = realm.configuration.fileURL.path;
+    NSDictionary *dict= [[NSFileManager defaultManager] attributesOfItemAtPath:path error:nil];
     
-    
-//    [realm transactionWithBlock:^{
-//        for (int i = 0; i < 10; i++) {
-//            Person *p = [[Person alloc] init];
-//            p.name = [NSString stringWithFormat:@"Jack-----%d",i];;
-//            p.age = 19 + i;
-//            [realm addObject:p];
-//            if (i < 5) {
-//                [self.arrayM addObject:p];
-//            }
-//        }
-//    }];
-//    
-    
-    NSLog(@"realm:%@ Path:%@",[Person allObjects],realm.configuration.fileURL);
+    NSLog(@"realm:%@ size: %llu Path:%@",[Person allObjects],dict.fileSize,path);
 }
 - (IBAction)deleteObjects:(UIButton *)sender {
     
@@ -77,7 +79,7 @@ static int i = 0;
     TwoViewController *twoVC =  self.navigationController.viewControllers.lastObject;
 //    twoVC.arrayM = [[NSMutableArray alloc] init];
     [twoVC.arrayM addObjectsFromArray:self.arrayM];
-    [self.arrayM removeAllObjects];
+//    [self.arrayM removeAllObjects];
     NSLog(@"%@",twoVC.arrayM);
 }
 

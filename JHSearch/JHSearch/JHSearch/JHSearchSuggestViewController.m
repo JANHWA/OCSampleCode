@@ -35,14 +35,11 @@ static NSString *const cellID = @"JHSuggestTableViewCellID";
     
     NSArray *historyArray = [NSKeyedUnarchiver unarchiveObjectWithFile:PATH_SEARCH_HISTORY];
     
-    [self.dataArray addObject:self.hotSearchs];
     if ([historyArray count] > 0) {
         [self.dataArray addObject:historyArray];
     }
     [self.tableView reloadData];
 }
-
-
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -51,6 +48,8 @@ static NSString *const cellID = @"JHSuggestTableViewCellID";
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
 }
+
+//MARK: - UIScrollViewDelegate
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     if (_scrollViewDidScrollHandler) {
@@ -150,7 +149,6 @@ static NSString *const cellID = @"JHSuggestTableViewCellID";
 
 //MARK: - Setter & Getter
 
-
 - (NSMutableArray *)dataArray {
     if (_dataArray == nil) {
         _dataArray = [[NSMutableArray alloc] init];
@@ -158,6 +156,17 @@ static NSString *const cellID = @"JHSuggestTableViewCellID";
     return _dataArray;
 }
 
+- (void)setHotSearchs:(NSArray<NSString *> *)hotSearchs {
+    if (_hotSearchs != hotSearchs) {
+        _hotSearchs = hotSearchs;
+        if ([self.dataArray count] > 0) {
+            [self.dataArray replaceObjectAtIndex:0 withObject:_hotSearchs];
+        } else {
+            [self.dataArray addObject:_hotSearchs];
+        }
+        [self.tableView reloadData];
+    }
+}
 
 
 @end

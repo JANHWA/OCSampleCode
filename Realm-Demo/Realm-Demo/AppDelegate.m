@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-
+#import <Realm/Realm.h>
+#import "Person.h"
 @interface AppDelegate ()
 
 @end
@@ -17,6 +18,27 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    RLMRealmConfiguration *config = [RLMRealmConfiguration defaultConfiguration];
+    config.schemaVersion = 2;
+    
+    config.migrationBlock = ^(RLMMigration *migration, uint64_t oldSchemaVersion) {
+        // We haven’t migrated anything yet, so oldSchemaVersion == 0
+        if (oldSchemaVersion < 2) {
+            // Nothing to do!
+            // Realm will automatically detect new properties and removed properties
+            // And will update the schema on disk automatically
+            [migration enumerateObjects:Person.className
+                                  block:^(RLMObject *oldObject, RLMObject *newObject) {
+
+                                      // combine name fields into a single field
+                                      newObject[@"height"] = @175;
+                                      newObject[@"weight"] = @110;
+                                  }];
+        }
+    };
+    [RLMRealmConfiguration setDefaultConfiguration:config];
+    
     return YES;
 }
 

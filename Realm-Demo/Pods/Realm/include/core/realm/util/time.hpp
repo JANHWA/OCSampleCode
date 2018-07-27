@@ -28,6 +28,8 @@
 #include <ostream>
 #include <sstream>
 
+#include <chrono>
+
 
 namespace realm {
 namespace util {
@@ -41,30 +43,46 @@ std::tm gmtime(std::time_t);
 /// Similar to std::put_time() from <iomanip>. See std::put_time() for
 /// information about the format string. This function is provided because
 /// std::put_time() is unavailable in GCC 4. This function is thread safe.
+///
+/// The default format is ISO 8601 date and time.
 template<class C, class T>
-void put_time(std::basic_ostream<C,T>&, const std::tm&, const C* format);
+void put_time(std::basic_ostream<C,T>&, const std::tm&, const C* format = "%FT%T%z");
 
 /// @{ These functions combine localtime() or gmtime() with put_time() and
 /// std::ostringstream. For detals on the format string, see
 /// std::put_time(). These function are thread safe.
-std::string format_local_time(std::time_t, const char* format);
-std::string format_utc_time(std::time_t, const char* format);
+std::string format_local_time(std::time_t, const char* format = "%FT%T%z");
+std::string format_utc_time(std::time_t, const char* format = "%FT%T%z");
 /// @}
 
+struct Clock {
+    using time_point = std::chrono::system_clock::time_point;
+    using duration = std::chrono::system_clock::duration;
 
+    virtual ~Clock() {}
+    virtual time_point now() const noexcept = 0;
+};
 
+struct SystemClock : Clock {
+    time_point now() const noexcept final
+    {
+        return std::chrono::system_clock::now();
+    }
+};
+
+const SystemClock& get_system_clock() noexcept;
 
 // Implementation
 
 template<class C, class T>
-void put_time(std::basic_ostream<C,T>& out, const std::tm& tm, const C* format)
+inline void put_time(std::basic_ostream<C,T>& out, const std::tm& tm, const C* format)
 {
     const auto& facet = std::use_facet<std::time_put<C>>(out.getloc()); // Throws
     facet.put(std::ostreambuf_iterator<C>(out), out, ' ', &tm,
               format, format + T::length(format)); // Throws
 }
 
-std::string format_local_time(std::time_t time, const char* format)
+inline std::string format_local_time(std::time_t time, const char* format)
 {
     std::tm tm = util::localtime(time);
     std::ostringstream out;
@@ -72,7 +90,7 @@ std::string format_local_time(std::time_t time, const char* format)
     return out.str(); // Throws
 }
 
-std::string format_utc_time(std::time_t time, const char* format)
+inline std::string format_utc_time(std::time_t time, const char* format)
 {
     std::tm tm = util::gmtime(time);
     std::ostringstream out;

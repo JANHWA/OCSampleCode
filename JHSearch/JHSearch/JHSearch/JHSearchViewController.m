@@ -39,14 +39,6 @@ JHSearchSuggestViewControllerDelegate
     self.searchBar.placeholder = self.searchBarPlaceholder;
 }
 
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        
-    }
-    return self;
-}
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -57,6 +49,22 @@ JHSearchSuggestViewControllerDelegate
     [super viewWillDisappear:animated];
     [self.searchBar resignFirstResponder];
 }
+
++ (JHSearchViewController *)searchViewControllerWithHotSearchs:(NSArray <NSString *>*)hotSearchs searchBarPlaceholder:(NSString *)placeholder {
+    JHSearchViewController *searchVC = [[JHSearchViewController alloc] init];
+    searchVC.hotSearchs = hotSearchs;
+    searchVC.searchBarPlaceholder = placeholder;
+    return searchVC;
+}
+
++ (JHSearchViewController *)searchViewControllerWithHotSearchs:(NSArray <NSString *>*)hotSearchs searchBarPlaceholder:(NSString *)placeholder searhButtonClickHandler:(SearchBarSearchButtonClickHandler)searchButtonHandler {
+    JHSearchViewController *searchVC = [self searchViewControllerWithHotSearchs:hotSearchs searchBarPlaceholder:placeholder];
+    searchVC.searchButtonClickHandler = searchButtonHandler;
+    return searchVC;
+}
+
+
+//MARK: - UIScrollViewDelegate
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     [self.searchBar resignFirstResponder];
@@ -77,6 +85,14 @@ JHSearchSuggestViewControllerDelegate
         }
     }
     [self.searchBar resignFirstResponder];
+    
+    if ([self.delegate respondsToSelector:@selector(searchViewController:searchBarSearchButtonClicked:)]) {
+        [self.delegate searchViewController:self searchBarSearchButtonClicked:searchBar];
+    }
+    
+    if (_searchButtonClickHandler) {
+        _searchButtonClickHandler(self,self.searchBar);
+    }
 }
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
@@ -102,6 +118,13 @@ JHSearchSuggestViewControllerDelegate
         }
     }
     [self.searchBar resignFirstResponder];
+    if ([self.delegate respondsToSelector:@selector(searchViewController:searchBarSearchButtonClicked:)]) {
+        [self.delegate searchViewController:self searchBarSearchButtonClicked:self.searchBar];
+    }
+    
+    if (_searchButtonClickHandler) {
+        _searchButtonClickHandler(self,self.searchBar);
+    }
 }
 
 
@@ -122,12 +145,18 @@ JHSearchSuggestViewControllerDelegate
     if (_searchSuggestController == nil) {
         _searchSuggestController = [[JHSearchSuggestViewController alloc] init];
         _searchSuggestController.delegate = self;
-        _searchSuggestController.hotSearchs = self.hotSearchs;
         [_searchSuggestController setScrollViewDidScrollHandler:^(UIScrollView *scrollView) {
             [weakSelf.searchBar resignFirstResponder];
         }];
     }
     return _searchSuggestController;
+}
+
+- (void)setHotSearchs:(NSArray<NSString *> *)hotSearchs {
+    if (_hotSearchs != hotSearchs) {
+        _hotSearchs = hotSearchs;
+        self.searchSuggestController.hotSearchs = _hotSearchs;
+    }
 }
 
 @end

@@ -11,14 +11,14 @@
 @implementation Person
 
 + (NSString *)primaryKey {
-    return @"name";
+    return @"ID";
 }
 
 // Specify default values for properties
 
 //+ (NSDictionary *)defaultPropertyValues
 //{
-//    return @{};
+//    return @{@""};
 //}
 
 // Specify properties to ignore (Realm won't persist these)

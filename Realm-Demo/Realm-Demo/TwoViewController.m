@@ -33,7 +33,9 @@
 
 - (IBAction)deleteButton:(UIButton *)sender {
     
-    if (_arrayM.count > 10) {
+//    NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject stringByAppendingString:@"/person.realm"];
+    
+    if (_arrayM.count >= 10) {
         NSRange range = {0,5};
         NSArray *array = [self.arrayM subarrayWithRange:range];
         RLMRealm *realm = [RLMRealm defaultRealm];

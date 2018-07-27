@@ -9,8 +9,11 @@
 #import <Realm/Realm.h>
 
 @interface Person : RLMObject
+@property int     ID;
 @property NSString *name;
 @property int       age;
+@property int       height;
+@property int       weight;
 @end
 
 // This protocol enables typed collections. i.e.:
