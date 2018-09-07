@@ -26,20 +26,20 @@ JHTagViewDelegate
     self.tagView.delegate = self;
 }
 
-- (void)showContentWithTags:(NSArray *)tags indexPath:(NSIndexPath *)indexPath {
+- (void)showContentWithTags:(NSArray *)tags tableView:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath {
+    self.tableView = tableView;
     
     self.indexPath = indexPath;
     [self.tagView reloadTagViewWithTags:tags];
 }
 
+
 //MARK: - JHTagViewDelegate
 
 - (void)tagView:(JHTagView *)tagView updateViewSize:(CGSize)size {
     
-    UITableView *tableView = (UITableView *)self.superview;
-    self.tagView.bounds = CGRectMake(0, 0, self .bounds.size.width, size.height);
-    
-    tableView.rowHeight = size.height + 16;
+    self.tagView.bounds = CGRectMake(0, 0, self.bounds.size.width, size.height);
+    self.tableView.rowHeight = size.height + 16;
 }
 
 - (void)tagView:(JHTagView *)tagView collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {

@@ -17,8 +17,9 @@ UITableViewDelegate,
 JHSuggestTableViewCellDelegate,
 JHTableViewSctionViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (strong, nonatomic) NSMutableArray     *dataArray;
+@property (weak, nonatomic) IBOutlet UITableView    *tableView;
+@property (strong, nonatomic) NSMutableArray        *dataArray;
+@property (strong, nonatomic) NSMutableArray <NSString *> *historyArray;
 
 @end
 
@@ -29,16 +30,32 @@ static NSString *const cellID = @"JHSuggestTableViewCellID";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+    self.tableView.estimatedRowHeight = 44.0;
     [self.tableView registerNib:[UINib nibWithNibName:@"JHSuggestTableViewCell" bundle:nil] forCellReuseIdentifier:cellID];
     [self.tableView setTableFooterView:[[UIView alloc] init]];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+
     
-    NSArray *historyArray = [NSKeyedUnarchiver unarchiveObjectWithFile:PATH_SEARCH_HISTORY];
+//    if ([historyArray count] > 0) {
+//        [self.dataArray addObject:historyArray];
+//    }
+//    [self.tableView reloadData];
+}
+
+- (void)dealWithData {
     
-    if ([historyArray count] > 0) {
-        [self.dataArray addObject:historyArray];
+    NSArray *historyArr = [NSKeyedUnarchiver unarchiveObjectWithFile:PATH_SEARCH_HISTORY];
+    
+    self.historyArray = [historyArr mutableCopy];
+    
+    if ([self.hotSearchs count] > 0 && [self.historyArray count] > 0) {
+        [self.dataArray addObject:self.hotSearchs];
+        [self.dataArray addObject:self.historyArray];
     }
-    [self.tableView reloadData];
+    
+    if ([self.hotSearchs count] == 0 && [self.historyArray count] > 0) {
+        
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -47,6 +64,16 @@ static NSString *const cellID = @"JHSuggestTableViewCellID";
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
+}
+
+- (void)reloadHotSearchTags:(NSArray *)tags {
+    if ([self.dataArray count] >= 1) {
+        [self.dataArray replaceObjectAtIndex:0 withObject:tags];
+    }
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.tableView reloadData];
+    });
 }
 
 //MARK: - UIScrollViewDelegate
@@ -72,25 +99,39 @@ static NSString *const cellID = @"JHSuggestTableViewCellID";
     JHSuggestTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.delegate = self;
-    [cell showContentWithTags:self.dataArray[indexPath.section] indexPath:indexPath];
-    
+    [cell showContentWithTags:self.dataArray[indexPath.section] tableView:tableView indexPath:indexPath];
     return cell;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     
     JHTableViewSctionView *sectionView = [[JHTableViewSctionView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 44.0)];
-    [sectionView showSectionContentWithSection:section];
+
+//    if (section == 0) {
+//        sectionView.rightButton.hidden = YES;
+//        sectionView.titleLabel.text = @"热门搜索";
+//    } else {
+//        sectionView.titleLabel.text = @"搜索历史";
+//    }
     sectionView.delegate = self;
     return sectionView;
 }
 
+
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    return 10;
+    if (section == 0) {
+        return 10.0;
+    } else {
+        return CGFLOAT_MIN;
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 44.0;
+    if (section < 2) {
+        return 44.0;
+    } else {
+        return CGFLOAT_MIN;
+    }
 }
 
 //MARK: - JHTableViewSctionViewDelegate
@@ -112,7 +153,6 @@ static NSString *const cellID = @"JHSuggestTableViewCellID";
         [self.dataArray removeObjectAtIndex:1];
         [self.tableView reloadData];
     }
-    
 }
 
 //MARK: - JHSuggestTableViewCellDelegate
@@ -157,15 +197,19 @@ static NSString *const cellID = @"JHSuggestTableViewCellID";
 }
 
 - (void)setHotSearchs:(NSArray<NSString *> *)hotSearchs {
-    if (_hotSearchs != hotSearchs) {
-        _hotSearchs = hotSearchs;
-        if ([self.dataArray count] > 0) {
-            [self.dataArray replaceObjectAtIndex:0 withObject:_hotSearchs];
-        } else {
-            [self.dataArray addObject:_hotSearchs];
-        }
-        [self.tableView reloadData];
+    _hotSearchs = hotSearchs;
+//    if ([self.dataArray count] > 0) {
+//        [self.dataArray replaceObjectAtIndex:0 withObject:_hotSearchs];
+//    } else {
+//        [self.dataArray addObject:_hotSearchs];
+//    }
+}
+
+- (NSMutableArray<NSString *> *)historyArray {
+    if (_historyArray == nil) {
+        _historyArray = [[NSMutableArray alloc] init];
     }
+    return _historyArray;
 }
 
 

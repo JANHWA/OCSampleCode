@@ -29,4 +29,6 @@ typedef void(^ScrollViewDidScrollHandler)(UIScrollView *scrollView);
 
 @property (weak, nonatomic) id<JHSearchSuggestViewControllerDelegate> delegate;
 
+- (void)reloadHotSearchTags:(NSArray *)tags;
+
 @end

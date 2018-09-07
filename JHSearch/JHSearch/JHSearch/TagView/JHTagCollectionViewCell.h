@@ -10,6 +10,8 @@
 
 @interface JHTagCollectionViewCell : UICollectionViewCell
 
+@property (weak, nonatomic) IBOutlet UIButton *tagBtn;
+
 @property (copy, nonatomic) NSString *title;
 
 @end

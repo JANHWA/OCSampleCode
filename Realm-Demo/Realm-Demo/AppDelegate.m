@@ -28,13 +28,13 @@
             // Nothing to do!
             // Realm will automatically detect new properties and removed properties
             // And will update the schema on disk automatically
-            [migration enumerateObjects:Person.className
-                                  block:^(RLMObject *oldObject, RLMObject *newObject) {
-
-                                      // combine name fields into a single field
-                                      newObject[@"height"] = @175;
-                                      newObject[@"weight"] = @110;
-                                  }];
+//            [migration enumerateObjects:Person.className
+//                                  block:^(RLMObject *oldObject, RLMObject *newObject) {
+//
+//                                      // combine name fields into a single field
+////                                      newObject[@"height"] = @175;
+////                                      newObject[@"weight"] = @110;
+//                                  }];
         }
     };
     [RLMRealmConfiguration setDefaultConfiguration:config];

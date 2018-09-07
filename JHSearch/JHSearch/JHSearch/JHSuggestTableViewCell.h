@@ -21,13 +21,13 @@
 
 @interface JHSuggestTableViewCell : UITableViewCell
 
-
+@property (strong, nonatomic) UITableView *tableView;
 
 @property (weak, nonatomic) id<JHSuggestTableViewCellDelegate> delegate;
 
 @property (strong, nonatomic) NSIndexPath *indexPath;
 
-- (void)showContentWithTags:(NSArray *)tags indexPath:(NSIndexPath *)indexPath;
+- (void)showContentWithTags:(NSArray *)tags tableView:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath;
 
 
 

@@ -20,6 +20,9 @@
 
 @interface JHTableViewSctionView : UIView
 
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UIButton *rightButton;
+
 @property (assign, nonatomic) NSInteger section;
 
 @property (weak, nonatomic) id<JHTableViewSctionViewDelegate> delegate;

@@ -10,7 +10,7 @@
 
 
 @interface JHTagCollectionViewCell ()
-@property (weak, nonatomic) IBOutlet UIButton *tagBtn;
+
 
 @end
 
@@ -21,9 +21,7 @@
     [super awakeFromNib];
     // Initialization code
     
-//    self.tagBtn.layer.borderColor = [UIColor lightGrayColor].CGColor;
-    self.tagBtn.layer.cornerRadius = 10.0;
-//    self.tagBtn.layer.borderWidth = 1.0;
+    self.tagBtn.layer.cornerRadius = 3.0;
     self.tagBtn.layer.masksToBounds = YES;
 }
 

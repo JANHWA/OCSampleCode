@@ -15,6 +15,8 @@
 
 @property (strong, nonatomic) JHSearchResultViewController *searchResultController;
 
+@property (strong, nonatomic) JHSearchViewController *searchVC;
+
 
 @end
 
@@ -23,6 +25,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+  
+}
+
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    
+    // 模拟网络请求热词
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        NSArray *hotSearchs = @[@"比特币",@"以太坊",@"柚子",@"BNB",@"ETC",@"BCH",@"TRX",@"ADA",@"OMG",@"ZIL"];
+        [self.searchVC reloadHotSearchTags:hotSearchs];
+    });
 }
 
 - (IBAction)searchButton:(UIButton *)sender {
@@ -30,15 +45,13 @@
     
     NSArray *hotSearchs = @[@"BMW",@"法拉利",@"兰博基尼",@"迈巴赫",@"迈凯伦",@"科尼塞柯",@"保时捷",@"Benz",@"玛莎拉蒂",@"阿尔法罗密欧",@"布加迪"];
     
-    JHSearchViewController *searchVC = [JHSearchViewController searchViewControllerWithHotSearchs:hotSearchs searchBarPlaceholder:@"保时捷" searhButtonClickHandler:^(JHSearchViewController *searchViewController, UISearchBar *searchBar) {
+    self.searchVC = [JHSearchViewController searchViewControllerWithHotSearchs:hotSearchs searchBarPlaceholder:@"保时捷" searhButtonClickHandler:^(JHSearchViewController *searchViewController, JHSearchBar *searchBar) {
         
-         NSLog(@"searchText:%@",searchBar.text);
+         NSLog(@"searchText:%@",searchBar.searchTextField.text);
     }];
     
-    
-    
-    searchVC.searchResultController = self.searchResultController;
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:searchVC];
+    self.searchVC.searchResultController = self.searchResultController;
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:self.searchVC];
     
     [self presentViewController:nav animated:YES completion:nil];
 }

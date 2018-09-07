@@ -57,8 +57,7 @@ UICollectionViewDataSource
 
 - (void)reloadTagViewWithTags:(NSArray *)tags {
     
-    [self.dataArray removeAllObjects];
-    [self.dataArray addObjectsFromArray:tags];
+    self.dataArray = tags.mutableCopy;
     
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.collectionView reloadData];
@@ -117,19 +116,6 @@ UICollectionViewDataSource
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
     return UIEdgeInsetsMake(0, 0, 0, 5);
 }
-
-
-//MARK: - setter & getter
-
-- (NSMutableArray *)dataArray {
-    if (_dataArray == nil) {
-        _dataArray = [[NSMutableArray alloc] init];
-    }
-    return _dataArray;
-}
-
-
-
 
 @end
 

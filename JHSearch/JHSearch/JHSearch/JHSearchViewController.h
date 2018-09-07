@@ -9,19 +9,19 @@
 #import <UIKit/UIKit.h>
 #import "JHSearchResultViewController.h"
 #import "JHSearchSuggestViewController.h"
+#import "JHSearchBar.h"
 
 @class JHSearchViewController;
 
 @protocol JHSearchViewControllerDelegate<NSObject>
 
 @optional
-
-- (void)searchViewController:(JHSearchViewController *)searchViewController searchBarSearchButtonClicked:(UISearchBar *)searchBar;
+- (void)searchViewController:(JHSearchViewController *)searchViewController searchBarSearchButtonClicked:(JHSearchBar *)searchBar;
 
 @end
 
 
-typedef void(^SearchBarSearchButtonClickHandler)(JHSearchViewController *searchViewController, UISearchBar *searchBar);
+typedef void(^SearchBarSearchButtonClickHandler)(JHSearchViewController *searchViewController, JHSearchBar *searchBar);
 
 @interface JHSearchViewController : UIViewController
 
@@ -29,9 +29,9 @@ typedef void(^SearchBarSearchButtonClickHandler)(JHSearchViewController *searchV
 @property (weak, nonatomic) id<JHSearchViewControllerDelegate> delegate;
 @property (copy, nonatomic) SearchBarSearchButtonClickHandler searchButtonClickHandler;
 
-@property (strong, nonatomic) JHSearchResultViewController *searchResultController;
+@property (strong, nonatomic) UIViewController *searchResultController;
 
-@property (strong, nonatomic) UISearchBar *searchBar;
+@property (strong, nonatomic) JHSearchBar *searchBar;
 
 @property (copy, nonatomic) NSString *searchBarPlaceholder;
 
@@ -40,9 +40,12 @@ typedef void(^SearchBarSearchButtonClickHandler)(JHSearchViewController *searchV
  */
 @property (strong, nonatomic) NSArray<NSString *> *hotSearchs;
 
-+ (JHSearchViewController *)searchViewControllerWithHotSearchs:(NSArray <NSString *>*)hotSearchs
-                                          searchBarPlaceholder:(NSString *)placeholder
++ (JHSearchViewController *)searchViewControllerWithHotSearchs:(nullable NSArray <NSString *> *)hotSearchs
+                                          searchBarPlaceholder:(nullable NSString *)placeholder
                                        searhButtonClickHandler:(SearchBarSearchButtonClickHandler)searchButtonHandler;
+
+
+- (void)reloadHotSearchTags:(NSArray *)tags;
 
 
 

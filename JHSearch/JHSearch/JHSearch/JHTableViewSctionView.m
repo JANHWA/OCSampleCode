@@ -10,8 +10,7 @@
 
 @interface JHTableViewSctionView ()
 @property (strong, nonatomic) IBOutlet UIView *view;
-@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-@property (weak, nonatomic) IBOutlet UIButton *rightButton;
+
 
 @end
 

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C50A3BDA2119506D00D43B3B /* JHSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C50A3BD72119506C00D43B3B /* JHSearchBar.m */; };
+		C50A3BDB2119506D00D43B3B /* JHSearchBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = C50A3BD82119506D00D43B3B /* JHSearchBar.xib */; };
+		C50A3BDD2119688100D43B3B /* JHSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C50A3BDC2119688100D43B3B /* JHSearchViewController.xib */; };
 		C528113E20FF14FC00F57F70 /* JHSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C528113D20FF14FC00F57F70 /* JHSearchViewController.m */; };
 		C528114220FF1AF400F57F70 /* JHSuggestTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C528114020FF1AF400F57F70 /* JHSuggestTableViewCell.m */; };
 		C528114320FF1AF400F57F70 /* JHSuggestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C528114120FF1AF400F57F70 /* JHSuggestTableViewCell.xib */; };
@@ -30,6 +33,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C50A3BD72119506C00D43B3B /* JHSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHSearchBar.m; sourceTree = "<group>"; };
+		C50A3BD82119506D00D43B3B /* JHSearchBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JHSearchBar.xib; sourceTree = "<group>"; };
+		C50A3BD92119506D00D43B3B /* JHSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHSearchBar.h; sourceTree = "<group>"; };
+		C50A3BDC2119688100D43B3B /* JHSearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JHSearchViewController.xib; sourceTree = "<group>"; };
 		C528113C20FF14FC00F57F70 /* JHSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JHSearchViewController.h; sourceTree = "<group>"; };
 		C528113D20FF14FC00F57F70 /* JHSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JHSearchViewController.m; sourceTree = "<group>"; };
 		C528113F20FF1AF400F57F70 /* JHSuggestTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JHSuggestTableViewCell.h; sourceTree = "<group>"; };
@@ -96,24 +103,28 @@
 		C5530AB0210184E000905729 /* JHSearch */ = {
 			isa = PBXGroup;
 			children = (
-				C528114420FF1C6D00F57F70 /* TagView */,
-				C528113C20FF14FC00F57F70 /* JHSearchViewController.h */,
-				C528113D20FF14FC00F57F70 /* JHSearchViewController.m */,
-				C528113F20FF1AF400F57F70 /* JHSuggestTableViewCell.h */,
-				C528114020FF1AF400F57F70 /* JHSuggestTableViewCell.m */,
-				C528114120FF1AF400F57F70 /* JHSuggestTableViewCell.xib */,
-				C528114F20FF2A1D00F57F70 /* JHTableViewSctionView.h */,
-				C528115020FF2A1D00F57F70 /* JHTableViewSctionView.m */,
-				C528115220FF2A2800F57F70 /* JHTableViewSctionView.xib */,
+				C5530AAE2101836300905729 /* JHSearch.h */,
+				C50A3BD92119506D00D43B3B /* JHSearchBar.h */,
+				C50A3BD72119506C00D43B3B /* JHSearchBar.m */,
+				C50A3BD82119506D00D43B3B /* JHSearchBar.xib */,
+				C5530AAF2101838300905729 /* JHSearchHeader.pch */,
+				C5530AB12101855400905729 /* JHSearchMacro.h */,
 				C52811572100631E00F57F70 /* JHSearchResultViewController.h */,
 				C52811582100631E00F57F70 /* JHSearchResultViewController.m */,
 				C52811592100631E00F57F70 /* JHSearchResultViewController.xib */,
 				C5530AA9210182FF00905729 /* JHSearchSuggestViewController.h */,
 				C5530AAA210182FF00905729 /* JHSearchSuggestViewController.m */,
 				C5530AAB210182FF00905729 /* JHSearchSuggestViewController.xib */,
-				C5530AAE2101836300905729 /* JHSearch.h */,
-				C5530AAF2101838300905729 /* JHSearchHeader.pch */,
-				C5530AB12101855400905729 /* JHSearchMacro.h */,
+				C528113C20FF14FC00F57F70 /* JHSearchViewController.h */,
+				C528113D20FF14FC00F57F70 /* JHSearchViewController.m */,
+				C50A3BDC2119688100D43B3B /* JHSearchViewController.xib */,
+				C528113F20FF1AF400F57F70 /* JHSuggestTableViewCell.h */,
+				C528114020FF1AF400F57F70 /* JHSuggestTableViewCell.m */,
+				C528114120FF1AF400F57F70 /* JHSuggestTableViewCell.xib */,
+				C528114F20FF2A1D00F57F70 /* JHTableViewSctionView.h */,
+				C528115020FF2A1D00F57F70 /* JHTableViewSctionView.m */,
+				C528115220FF2A2800F57F70 /* JHTableViewSctionView.xib */,
+				C528114420FF1C6D00F57F70 /* TagView */,
 			);
 			path = JHSearch;
 			sourceTree = "<group>";
@@ -210,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5E43F8820FEEF3400AE7F37 /* LaunchScreen.storyboard in Resources */,
+				C50A3BDD2119688100D43B3B /* JHSearchViewController.xib in Resources */,
 				C5E43F8520FEEF3400AE7F37 /* Assets.xcassets in Resources */,
 				C528114320FF1AF400F57F70 /* JHSuggestTableViewCell.xib in Resources */,
 				C528115320FF2A2800F57F70 /* JHTableViewSctionView.xib in Resources */,
@@ -218,6 +230,7 @@
 				C528115B2100631E00F57F70 /* JHSearchResultViewController.xib in Resources */,
 				C528114C20FF1C6D00F57F70 /* JHTagView.xib in Resources */,
 				C5530AAD210182FF00905729 /* JHSearchSuggestViewController.xib in Resources */,
+				C50A3BDB2119506D00D43B3B /* JHSearchBar.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,6 +244,7 @@
 				C5E43F8020FEEF3300AE7F37 /* ViewController.m in Sources */,
 				C528114D20FF1C6D00F57F70 /* JHTagView.m in Sources */,
 				C528115120FF2A1D00F57F70 /* JHTableViewSctionView.m in Sources */,
+				C50A3BDA2119506D00D43B3B /* JHSearchBar.m in Sources */,
 				C5E43F8B20FEEF3400AE7F37 /* main.m in Sources */,
 				C528115620FF401300F57F70 /* JHCollectionViewFlowLayout.m in Sources */,
 				C5530AAC210182FF00905729 /* JHSearchSuggestViewController.m in Sources */,

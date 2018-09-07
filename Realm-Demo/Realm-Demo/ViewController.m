@@ -39,17 +39,18 @@
     
     RLMRealm *realm = [RLMRealm realmWithConfiguration:config error:nil];
     
+    for (int i = 0; i < 10; i++) {
+        Person *p = [[Person alloc] init];
+        p.name = [NSString stringWithFormat:@"Jack_%d",i];;
+        p.age = 19 + i;
+        p.ID  = 1000+i;
+        p.height = 165 + i;
+//        p.weight = 100 + i;
+        
+        [self.arrayM addObject:p];
+    }
+    
     [realm transactionWithBlock:^{
-        for (int i = 0; i < 10; i++) {
-            Person *p = [[Person alloc] init];
-            p.name = [NSString stringWithFormat:@"Jack_%d",i];;
-            p.age = 19 + i;
-            p.ID  = 1000+i;
-            p.height = 175 + i;
-            p.weight = 100 + i;
-            
-            [self.arrayM addObject:p];
-        }
         
         if (realm.isEmpty) {
             [realm addObjects:self.arrayM];
@@ -64,6 +65,7 @@
     
     NSLog(@"realm:%@ size: %llu Path:%@",[Person allObjects],dict.fileSize,path);
 }
+
 - (IBAction)deleteObjects:(UIButton *)sender {
     
 }
@@ -77,9 +79,7 @@
 - (IBAction)pushButton:(UIButton *)sender {
     
     TwoViewController *twoVC =  self.navigationController.viewControllers.lastObject;
-//    twoVC.arrayM = [[NSMutableArray alloc] init];
     [twoVC.arrayM addObjectsFromArray:self.arrayM];
-//    [self.arrayM removeAllObjects];
     NSLog(@"%@",twoVC.arrayM);
 }
 

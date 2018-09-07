@@ -14,7 +14,8 @@
 
 <
 UISearchBarDelegate,
-JHSearchSuggestViewControllerDelegate
+JHSearchSuggestViewControllerDelegate,
+JHSearchBarDelegate
 >
 
 @property (strong, nonatomic) JHSearchSuggestViewController *searchSuggestController;
@@ -28,7 +29,7 @@ JHSearchSuggestViewControllerDelegate
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationItem.titleView = self.searchBar;
+    [self.navigationController.navigationBar addSubview:self.searchBar];
     
     [self.view addSubview:self.searchResultController.view];
     [self addChildViewController:self.searchResultController];
@@ -36,18 +37,21 @@ JHSearchSuggestViewControllerDelegate
     [self.view addSubview:self.searchSuggestController.view];
     [self addChildViewController:self.searchSuggestController];
     
-    self.searchBar.placeholder = self.searchBarPlaceholder;
+    self.searchBar.searchTextField.placeholder = self.searchBarPlaceholder;
 }
-
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self.searchBar becomeFirstResponder];
+    [self.searchBar.searchTextField becomeFirstResponder];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    [self.searchBar resignFirstResponder];
+    [self.searchBar.searchTextField resignFirstResponder];
+}
+
+- (void)reloadHotSearchTags:(NSArray *)tags {
+    [self.searchSuggestController reloadHotSearchTags:tags];
 }
 
 + (JHSearchViewController *)searchViewControllerWithHotSearchs:(NSArray <NSString *>*)hotSearchs searchBarPlaceholder:(NSString *)placeholder {
@@ -63,54 +67,15 @@ JHSearchSuggestViewControllerDelegate
     return searchVC;
 }
 
-
-//MARK: - UIScrollViewDelegate
-
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    [self.searchBar resignFirstResponder];
-}
-
-
-//MARK: - UISearchBarDelegate
-
-- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
-    self.searchResultController.view.hidden = 0 == searchBar.text.length;
-    if ([searchBar.text length] > 0) {
-        if (self.searchResultController) {
-            [self.view bringSubviewToFront:self.searchResultController.view];
-        }
-    }
-    [self.searchBar resignFirstResponder];
-    
-    if ([self.delegate respondsToSelector:@selector(searchViewController:searchBarSearchButtonClicked:)]) {
-        [self.delegate searchViewController:self searchBarSearchButtonClicked:searchBar];
-    }
-    
-    if (_searchButtonClickHandler) {
-        _searchButtonClickHandler(self,self.searchBar);
-    }
-}
-
-- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
-    
-    self.searchResultController.view.hidden = 0 == searchText.length;
-
-    if (searchText.length == 0) {
-        [self.view bringSubviewToFront:self.searchSuggestController.view];
-    }
-}
-
 //MARK: - JHSearchSuggestViewControllerDelegate
 
 - (void)searchSuggestViewController:(JHSearchSuggestViewController *)searchSuggestController suggestTableViewCell:(JHSuggestTableViewCell *)cell searchText:(NSString *)tagSearchText {
-    self.searchBar.text = tagSearchText;
     
+    
+    self.searchBar.searchTextField.text = tagSearchText;
+
     self.searchResultController.view.hidden = 0 == tagSearchText.length;
-    if ([self.searchBar.text length] > 0) {
+    if ([self.searchBar.searchTextField.text length] > 0) {
         if (self.searchResultController) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.view bringSubviewToFront:self.searchResultController.view];
@@ -121,19 +86,51 @@ JHSearchSuggestViewControllerDelegate
     if ([self.delegate respondsToSelector:@selector(searchViewController:searchBarSearchButtonClicked:)]) {
         [self.delegate searchViewController:self searchBarSearchButtonClicked:self.searchBar];
     }
-    
+
     if (_searchButtonClickHandler) {
         _searchButtonClickHandler(self,self.searchBar);
     }
 }
 
+//MARK: - JHSearchBarDelegate
+
+- (void)searchBar:(JHSearchBar *)searchBar searchTextFieldDidChanged:(UITextField *)textField {
+    NSString *searchText = textField.text;
+    self.searchResultController.view.hidden = 0 == searchText.length;
+    
+    if (searchText.length == 0) {
+        [self.view bringSubviewToFront:self.searchSuggestController.view];
+    }
+}
+
+- (BOOL)searchBar:(JHSearchBar *)searchBar textFieldShouldReturn:(UITextField *)textField {
+    self.searchResultController.view.hidden = 0 == searchBar.searchTextField.text.length;
+    if ([searchBar.searchTextField.text length] > 0) {
+        if (self.searchResultController) {
+            [self.view bringSubviewToFront:self.searchResultController.view];
+        }
+    }
+    [self.searchBar.searchTextField resignFirstResponder];
+
+    if ([self.delegate respondsToSelector:@selector(searchViewController:searchBarSearchButtonClicked:)]) {
+        [self.delegate searchViewController:self searchBarSearchButtonClicked:searchBar];
+    }
+
+    if (_searchButtonClickHandler) {
+        _searchButtonClickHandler(self,self.searchBar);
+    }
+    return YES;
+}
+
+- (void)searchBar:(JHSearchBar *)searchBar didSelectCancelButton:(UIButton *)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 //MARK: - setter & getter
 
-- (UISearchBar *)searchBar {
+- (JHSearchBar *)searchBar {
     if (_searchBar == nil) {
-        _searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 40)];
-        _searchBar.showsCancelButton = YES;
+        _searchBar = [[JHSearchBar alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 44)];
         _searchBar.delegate = self;
     }
     return _searchBar;
@@ -146,7 +143,7 @@ JHSearchSuggestViewControllerDelegate
         _searchSuggestController = [[JHSearchSuggestViewController alloc] init];
         _searchSuggestController.delegate = self;
         [_searchSuggestController setScrollViewDidScrollHandler:^(UIScrollView *scrollView) {
-            [weakSelf.searchBar resignFirstResponder];
+            [weakSelf.searchBar.searchTextField resignFirstResponder];
         }];
     }
     return _searchSuggestController;
